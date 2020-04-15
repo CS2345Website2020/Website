@@ -10,6 +10,7 @@ import ArtList from './components/ArtList';
 import Login from './components/admin/Login';
 import SignUp from './components/admin/SignUp';
 import AdminHome from './components/admin/AdminHome';
+import EditArt from './components/admin/EditArt';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
       <Route path="/Admin" exact component={AdminHome}></Route>
       <Route path="/Admin/Login" component={Login}></Route>
       <Route path="/Admin/Register" component={SignUp}></Route>
+      <Route path="/Admin/Art/:id" component={EditArt}></Route>
     </div>
   );
 }
