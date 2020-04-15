@@ -12,21 +12,35 @@ function Navigation() {
         <div id="nav-container">
             <div id="title-container">
                 <img src={Logo} alt="The word Bowdoin in white text on a black background"/>
-                <h2>CSCI 2345 Project</h2>
+                <h2 className="title">CSCI 2345 Project</h2>
             </div>
 
             <div id="link-container">
                 <div className="link-box">
-                    <Link to='/' className="link">Home</Link>
+                    <Link to='/' className="navLink">
+                        <div className="borderRight">
+                            <h2 className="menuTitle">Home</h2>
+                        </div>
+                    </Link>
                 </div>
                 <div className="link-box">
-                    <Link to='/Database' className="link">Database</Link>
+                    <Link to='/Database' className="navLink">
+                        <div className="borderRight">
+                            <h2 className="menuTitle">Database</h2>
+                        </div>
+                    </Link>
                 </div>
                 <div className="link-box">
-                    <Link to='/Project-History' className="link">History</Link>
+                    <Link to='/Project-History' className="navLink">
+                        <div className="borderRight">
+                            <h2 className="menuTitle">History</h2>
+                        </div>
+                    </Link>
                 </div>
                 <div className="link-box">
-                    <Link to='/About' className="link">About</Link>
+                    <Link to='/About' className="navLink">
+                        <h2 className="menuTitle">About</h2>
+                    </Link>
                 </div>
             </div>
         </div>
