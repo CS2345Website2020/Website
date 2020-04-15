@@ -2,9 +2,12 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 function EditArt(props) {
-	console.log(props)
+    console.log(props)
+    
+    // hook keeps track of art information  
 	const [art, setArt] = useState(null); 
 
+    // get the artwork by its id 
 	const fetchArt = id => {
 		axios
 			.get(`https://artmuseumdraft.herokuapp.com/art/${id}`)
@@ -19,6 +22,7 @@ function EditArt(props) {
 		
 	}, [props.match.params.id])
 
+    // update hook info 
 	const handleChange = event => setArt({...art, [event.target.name]: event.target.value})
 
 	const handleSubmit = event => {
@@ -34,6 +38,7 @@ function EditArt(props) {
 			})
 	}
 
+    // waiting for art data to load 
 	if (!art) {
 	    return <div>Loading...</div>;
 	}
