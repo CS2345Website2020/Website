@@ -1,11 +1,13 @@
 import React from 'react';
-import AddArt from './AddArt';
+import AdminArtList from './AdminArtList';
 
 function AdminHome(props) {
     return (
         <div>
             <h1>Welcome, Admin!</h1>
-            <AddArt />
+            <div>
+                <AdminArtList />
+            </div>
         </div>
     );
 }

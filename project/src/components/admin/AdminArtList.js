@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios'; 
-import ArtCard from './ArtCard';
-import ArtImgs from '../images/artwork/index.js';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import AdminArtCard from './AdminArtCard';
+import ArtImgs from '../../images/artwork/index.js';
 
-function ArtList() {
-
+function AdminArtList(props) {
     // initial state of art data 
     const [art, setArt] = useState([])
     
@@ -31,17 +30,17 @@ function ArtList() {
     
 
     return (
-        <section id="admin-list-container">
+        <section id="admin-art-container">
             {art.map(artwork => {    
                 
                 // find correct image 
                 let photo = ArtImgs.filter(image => image.id === parseInt(artwork.id))
                 
                 // create an art card for each artwork 
-                return <ArtCard art={artwork} photo={photo[0].img} key={art.accession_number}/>
+                return <AdminArtCard art={artwork} photo={photo[0].img} key={art.accession_number}/>
             })}
         </section>
     );
 }
 
-export default ArtList;
+export default AdminArtList;
