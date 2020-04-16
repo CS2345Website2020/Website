@@ -82,7 +82,7 @@ const SignUp = withFormik({
                 // successful 
                 console.log("post login api response object", response.data);
                 
-                props.history.push('/Login')
+                props.history.push('/Admin/Login')
             }) 
     
             .catch(error => {

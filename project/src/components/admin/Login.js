@@ -37,7 +37,7 @@ const LoginForm = ({ errors, touched, values, handleSubmit, status, props}) => {
                 {/* password */}
                 <h2 className="placeholder">Password</h2>
                 <Field 
-                    type="text" 
+                    type="password" 
                     name="password" 
                     placeholder="Password" 
                     className="text-field"

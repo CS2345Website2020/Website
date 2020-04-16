@@ -31,7 +31,7 @@ function ArtList() {
     
 
     return (
-        <section id="admin-list-container">
+        <section id="art-list-container">
             {art.map(artwork => {    
                 
                 // find correct image 
