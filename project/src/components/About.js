@@ -1,7 +1,4 @@
 import React from 'react';
-import {Image, Container, Row, Col } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
-import { Button } from 'react-bootstrap';
 
 // style 
 import '../styles/about.css';
@@ -14,7 +11,6 @@ import YakuanaDavis from '../images/meet-the-team/yakuana-davis.jpeg'
 import git2 from '../images/meet-the-team/36675751.png'
 import git3 from '../images/meet-the-team/36677169.png'
 import git4 from '../images/meet-the-team/34076044.png'
-
 
 function About() {
     return (
