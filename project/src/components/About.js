@@ -4,7 +4,7 @@ import React from 'react';
 import '../styles/about.css';
 //import 'bootstrap/dist/css/bootstrap.min.css';
 
-// image 
+// images
 import StacyDoore from '../images/meet-the-team/stacy-doore.jpeg'
 import EmmeMcCabe from '../images/meet-the-team/emme-mccabe2.jpeg'
 import YakuanaDavis from '../images/meet-the-team/yakuana-davis.jpeg'
@@ -54,7 +54,7 @@ function About() {
             </div> 
             <div class="column">
                 <img className="avatar" src={EmmeMcCabe} alt="Student Emme McCabe"/>
-                <h2><a href="https://www.github.com/emmemccabe" className="link">Emme McCabe '20</a></h2>
+                <h2><a href="https://www.linkedin.com/in/emme-mccabe" className="link">Emme McCabe '20</a></h2>
                 <p> Computer Science Major with an interest in the convergence of computing ethics and quantitative trading. </p>
             </div>
 
@@ -72,10 +72,6 @@ function About() {
         <h2 class="text-uppercase"> Alexa Voice Integration </h2>
 
         <h2 class="text-uppercase"> Tracking and Navigation </h2>
-
-
-
-
 
 
         </div>
