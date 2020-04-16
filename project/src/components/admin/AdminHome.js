@@ -1,5 +1,6 @@
 import React from 'react';
-import AdminArtList from './AdminArtList';
+import '../../styles/AdminHome.css'
+// import AdminArtList from './AdminArtList';
 
 function AdminHome(props) {
     return (

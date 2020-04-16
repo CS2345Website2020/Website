@@ -17,7 +17,6 @@
 /* signup styles */
 
 #sign-container {
-    /* border: 1px solid black;  */
     height: 500px;
     max-width: 50%;
     margin: 50px auto;
@@ -31,12 +30,9 @@
     margin: 0px 20px;
 }
 
-
-
 /* login and signup styles */
 
 .form {
-    /* border: 1px solid palevioletred; */
     display: flex;
     flex-direction: column;
     margin: 0px 20px;
