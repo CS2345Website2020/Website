@@ -24,11 +24,11 @@ const LoginForm = ({ errors, touched, values, handleSubmit, status, props}) => {
 
             <Form className="form">
                 {/* username */}
-                <h2 className="placeholder">Userame</h2>
+                <h2 className="placeholder">Username</h2>
                 <Field 
                     type="text" 
                     name="username" 
-                    placeholder="Userame"
+                    placeholder="Username"
                     className="text-field"
                 />
                 {touched.name && errors.name && ( <p className="error">{errors.name}</p> )}
