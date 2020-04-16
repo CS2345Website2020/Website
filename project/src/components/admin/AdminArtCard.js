@@ -13,6 +13,7 @@
                 <p>{art.description}</p>
                 <p>{art.accession_number}</p>
             </div>
+            <button>Edit</button>
         </div>
     );
  }

@@ -1,5 +1,7 @@
 #admin-home-container {
     border: 1px solid red;
+    display: flex;
+    flex-direction: row;
 }
 
 #welcome-admin {
@@ -8,8 +10,33 @@
 
 #zone-container {
     border: 1px solid purple;
+    width: 12%; 
+}
+
+#zone-bottom {
+    border-top: 1px solid black;
 }
 
 #admin-art-container {
     border: 1px solid darkgreen;
+    width: 100%; 
+}
+
+#admin-list-container {
+    border: 1px solid palevioletred;
+}
+
+.admin-card {
+    border: 1px solid green; 
+}
+
+.admin-photo {
+    border: 1px solid firebrick;
+}
+
+.admin-text-conteiner {
+    border: 1px solid gold;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
