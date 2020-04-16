@@ -1,0 +1,36 @@
+#add-art-container {
+    /* background: rgba(39, 109, 189, 0.637); */
+    height: 900px;
+}
+
+#art-form {
+    border: 1px solid rebeccapurple;
+    background: white;
+    display: flex; 
+    flex-direction: column;
+    width: 70%; 
+    margin: 0px auto;
+}
+
+.art-input {
+    margin-bottom: 15px;
+    padding: 15px;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+.art-input:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+.add-placeholder {
+    text-align: left;
+    margin: 2px 0px;
+}
+
+
+#add-button {
+    border: 1px solid forestgreen;
+}
