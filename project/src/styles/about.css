@@ -33,6 +33,7 @@ body {
 }
 .text-uppercase {
     text-transform: uppercase;
+    color: black;
 }
 
 .team-member, .team-member .team-img {
@@ -136,18 +137,37 @@ body {
     /* padding-left: 20px; */
 }
 
-#title-container {
-    /* border: 1px solid red; */
-    display: flex; 
-    flex-direction: row;
-    width: 50%; 
-}
+.flex-container {
+    padding-top: 20px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    display: flex;
+    justify-content: center;
+  }
 
-img {
-    /* border: 1px solid red;  */
-    height: 70px; 
-    margin-right: 10px;
-}
+.column {
+    float: left;
+    width: 33.33%;
+  }
+  
+  .row {
+    margin: auto;
+  }
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+.avatar {
+    vertical-align: middle;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
 
 #link-container {
     /* border: 1px solid red;  */
@@ -156,6 +176,18 @@ img {
     justify-content: space-between;
     width: 40%; 
 }
+
+.img-container {
+    width: 500px;
+    height: 500px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}​
+
+.cover {
+    object-fit: cover;
+    height: 500px;
+  }
 
 .link-box{
     /* border: 1px solid green; */
@@ -167,13 +199,85 @@ img {
     /* border: 1px solid orange;   */
     text-decoration: none;
     font-size: 20px;
-    color: white;
+    color: black;
 }
 
 .link:hover {
     color: darken("white", 50%); 
     font-size: 25px;
 }
+
+.link-box:nth-last-child(3) {
+    /* text-align: left; */
+    width: 35%;
+}
+
+.link-box:hover {
+    background-color: #373737;
+}
+
+#nav-container {
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+    border-bottom: 1px solid black;
+    /* padding-left: 20px; */
+}
+
+#title-container {
+    /* border: 1px solid red; */
+    display: flex; 
+    flex-direction: row;
+    width: 50%; 
+}
+
+#link-container {
+    /* border: 1px solid red;  */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 40%; 
+}
+
+.borderRight {
+    margin: auto;
+    display: flex;
+    height: 60%;
+    width: 100%;
+    border-right: 1px solid #373737;
+}
+
+.teammate-box{
+    display: flex;
+    margin: auto;
+    width: 25%;
+    height: 100%;
+}
+
+.nameTitle {
+    font-size: 25px;
+    color: white;
+    font-family: Fira Sans;
+    margin: auto;
+}
+
+.teamLink {
+    /* border: 1px solid orange;   */
+    text-decoration: none;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.title {
+    font-family: Fira Sans;
+    font-size: 25px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
 
 .link-box:nth-last-child(3) {
     /* text-align: left; */
