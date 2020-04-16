@@ -74,10 +74,6 @@ function About() {
         <h2 class="text-uppercase"> Tracking and Navigation </h2>
 
 
-
-
-
-
         </div>
     
     );
