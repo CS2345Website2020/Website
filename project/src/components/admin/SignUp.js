@@ -22,7 +22,7 @@ const SignUpForm = ({ errors, touched, values, handleSubmit, status, props}) => 
                 <h1>Sign Up</h1>
                 <p>Please fill in this form to create an account.</p>
             </div>
-            <Form id="sign-form">
+            <Form className="form">
                 {/* username */}
                 <h2 className="placeholder">Userame</h2>
                 <Field 
