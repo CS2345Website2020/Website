@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Form, Field, withFormik } from 'formik';
 import * as Yup from 'yup';
 import axios from 'axios';
+
 
 
 const LoginForm = ({ errors, touched, values, handleSubmit, status, props}) => {
@@ -17,11 +19,12 @@ const LoginForm = ({ errors, touched, values, handleSubmit, status, props}) => {
     }, [status]); 
 
     return(
-        <div className="login-container">
+        <div id="login-container">
             <h1>Sign In</h1>
 
-            <Form>
-                {/* name */}
+            <Form className="form">
+                {/* username */}
+                <h2 className="placeholder">Userame</h2>
                 <Field 
                     type="text" 
                     name="username" 
@@ -32,6 +35,7 @@ const LoginForm = ({ errors, touched, values, handleSubmit, status, props}) => {
 
 
                 {/* password */}
+                <h2 className="placeholder">Password</h2>
                 <Field 
                     type="text" 
                     name="password" 
@@ -41,6 +45,8 @@ const LoginForm = ({ errors, touched, values, handleSubmit, status, props}) => {
                 {touched.name && errors.name && <p className="error">{errors.name}</p>}
 
                 <button type="submit" className="button">Submit</button>
+
+                <Link to="/Admin/Register" id="create"><p>Create an account</p></Link>
             </Form>
         </div>
     );
@@ -61,7 +67,7 @@ const Login = withFormik({
     validationSchema: Yup.object().shape({
         username: Yup
         .string()
-        .required("Please Enter Your Name"),
+        .required("Please Enter Your Username"),
         password: Yup
         .string()
         .required("Please Enter Your Password"),
