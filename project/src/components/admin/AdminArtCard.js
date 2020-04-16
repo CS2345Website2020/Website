@@ -2,19 +2,20 @@
  
  function AdminArtCard({ art, photo }) {
     return (
-        <div className="admin-card">
-            <img src={photo} alt={`${art.title} by ${art.artist}`} className="admin-photo"/>
-            <div className="admin-text-container">
-                <h2>{art.title}</h2>
-                <h3>{art.artist}</h3>
-                <p>{art.creation_date}</p>
-                <p>{art.type}; {art.medium_support}</p>
-                <p>{art.credit_line}</p>
-                <p>{art.description}</p>
-                <p>{art.accession_number}</p>
-            </div>
-            <button>Edit</button>
-        </div>
+        <tr className="admin-card">
+            <td><img src={photo} alt={`${art.title} by ${art.artist}`} className="admin-photo"/></td>
+            {/* <div className="admin-text-container"> */}
+            <td>{art.title}</td>
+            <td>{art.artist}</td>
+            <td>{art.creation_date}</td>
+            <td>{art.type}</td> 
+            <td>{art.medium_support}</td>
+            <td>{art.credit_line}</td>
+            <td>{art.description}</td>
+            <td>{art.accession_number}</td>
+            {/* </div> */}
+            {/* <button>Edit</button> */}
+        </tr>
     );
  }
  

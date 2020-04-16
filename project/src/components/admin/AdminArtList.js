@@ -31,6 +31,17 @@ function AdminArtList(props) {
 
     return (
         <section id="admin-list-container">
+            <tr>
+                <th>Image</th>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Creation Date</th>
+                <th>Type</th>
+                <th>Medium Support</th>
+                <th>Description</th>
+                <th>Credit Line</th>
+                <th>Accession Number</th>
+            </tr>
             {art.map(artwork => {    
                 
                 // find correct image 
