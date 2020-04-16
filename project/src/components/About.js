@@ -12,6 +12,7 @@ import git2 from '../images/meet-the-team/36675751.png'
 import git3 from '../images/meet-the-team/36677169.png'
 import git4 from '../images/meet-the-team/34076044.png'
 
+
 function About() {
     return (
         <div>
@@ -36,17 +37,6 @@ function About() {
         <h2 class="text-uppercase"> Website Development </h2>
 
         <div class="flex-container">
-
-          <div class="column">
-                <img className="avatar" src={EmmeMcCabe} alt="Student Emme McCabe"/>
-                <h2><a href="https://www.github.com/emmemccabe" className="link">Emme McCabe '20</a></h2>
-                <p> Computer Science Major with an interest in the convergence of computing ethics and quantitative trading. </p>
-            </div>
-            <div class="column">
-                <img className="avatar" src={git4} alt="Student Liam Juskevice"/>
-                <h2><a href="https://github.com/" className="link">Liam Juskevice '21</a></h2>
-                <p> Bio </p>
-            </div> 
             <div class="column">
                 <img className="avatar" src={git3} alt="Student Finn Bergquist "/>
                 <h2><a href="https://www.github.com/" className="link">Finn Bergquist '22</a></h2>
@@ -57,6 +47,17 @@ function About() {
                 <h2><a href="https://github.com/yakuana" className="link">Ya'Kuana Davis '21</a></h2>
                 <p> Full-time student at Bowdoin College and Lambda School studying Computer Science, Web Devolpment and Chinese. </p>
             </div> 
+            <div class="column">
+                <img className="avatar" src={git4} alt="Student Liam Juskevice"/>
+                <h2><a href="https://github.com/" className="link">Liam Juskevice '21</a></h2>
+                <p> Bio </p>
+            </div> 
+            <div class="column">
+                <img className="avatar" src={EmmeMcCabe} alt="Student Emme McCabe"/>
+                <h2><a href="https://www.github.com/emmemccabe" className="link">Emme McCabe '20</a></h2>
+                <p> Computer Science Major with an interest in the convergence of computing ethics and quantitative trading. </p>
+            </div>
+
                 
         </div>
 
