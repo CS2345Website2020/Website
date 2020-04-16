@@ -17,7 +17,7 @@ const LoginForm = ({ errors, touched, values, handleSubmit, status, props}) => {
     }, [status]); 
 
     return(
-        <div className="login-container">
+        <div id="login-container">
             <h1>Sign In</h1>
 
             <Form>
@@ -61,7 +61,7 @@ const Login = withFormik({
     validationSchema: Yup.object().shape({
         username: Yup
         .string()
-        .required("Please Enter Your Name"),
+        .required("Please Enter Your Username"),
         password: Yup
         .string()
         .required("Please Enter Your Password"),

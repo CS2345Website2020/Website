@@ -30,7 +30,7 @@ function AdminArtList(props) {
     
 
     return (
-        <section id="admin-art-container">
+        <section id="admin-list-container">
             {art.map(artwork => {    
                 
                 // find correct image 

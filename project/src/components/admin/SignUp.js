@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Form, Field, withFormik } from 'formik';
 import * as Yup from 'yup';
 import axios from 'axios';
-
+import '../../styles/LoginSign.css'
 
 const SignUpForm = ({ errors, touched, values, handleSubmit, status, props}) => {
 
@@ -17,11 +17,14 @@ const SignUpForm = ({ errors, touched, values, handleSubmit, status, props}) => 
     }, [status]); 
 
     return(
-        <div className="login-container">
-            <h1>Sign Up</h1>
-
-            <Form>
-                {/* name */}
+        <div id="sign-container">
+            <div id="sign-text">
+                <h1>Sign Up</h1>
+                <p>Please fill in this form to create an account.</p>
+            </div>
+            <Form id="sign-form">
+                {/* username */}
+                <h2 className="placeholder">Userame</h2>
                 <Field 
                     type="text" 
                     name="username" 
@@ -32,14 +35,16 @@ const SignUpForm = ({ errors, touched, values, handleSubmit, status, props}) => 
 
 
                 {/* password */}
+                <h2 className="placeholder">Password</h2>
                 <Field 
-                    type="text" 
+                    type="password" 
                     name="password" 
                     placeholder="Password" 
                     className="text-field"
                 />
                 {touched.name && errors.name && <p className="error">{errors.name}</p>}
 
+                <p>By creating an account to our <a href="https://library.bowdoin.edu/">Terms and Privacy</a>.</p>
                 <button type="submit" className="button">Submit</button>
             </Form>
         </div>
@@ -61,7 +66,7 @@ const SignUp = withFormik({
     validationSchema: Yup.object().shape({
         username: Yup
         .string()
-        .required("Please Enter Your Name"),
+        .required("Please Enter Your Username"),
         password: Yup
         .string()
         .required("Please Enter Your Password"),
@@ -77,7 +82,7 @@ const SignUp = withFormik({
                 // successful 
                 console.log("post login api response object", response.data);
                 
-                props.history.push('/login')
+                props.history.push('/Login')
             }) 
     
             .catch(error => {
