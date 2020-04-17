@@ -33,7 +33,12 @@ body {
 }
 .text-uppercase {
     text-transform: uppercase;
+    position: static;
+    display: inline-block;
+    letter-spacing: 2px;
+    width: 100%;
     color: black;
+    font-size: 30px;
 }
 
 .team-member, .team-member .team-img {
@@ -111,10 +116,11 @@ body {
 }
 .team-title {
     position: static;
-    padding: 20px 0;
     display: inline-block;
     letter-spacing: 2px;
     width: 100%;
+    color: black;
+    font-size: 25px;
 }
 .team-title h5 {
     margin-bottom: 0px;
