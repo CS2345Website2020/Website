@@ -19,7 +19,7 @@ function About() {
 
         <h1 class="text-uppercase"> Meet the Insite Project Team! </h1>
 
-        <h2 class="text-uppercase"> Project Management </h2>
+        <h2 class="team-title"> Project Management </h2>
 
         <div class="flex-container">
                 <div class="column">
@@ -34,12 +34,12 @@ function About() {
                 </div>
         </div>
 
-        <h2 class="text-uppercase"> Website Development </h2>
+        <h2 class="team-title"> Website Development </h2>
 
         <div class="flex-container">
             <div class="column">
                 <img className="avatar" src={git3} alt="Student Finn Bergquist "/>
-                <h2><a href="https://www.github.com/" className="link">Finn Bergquist '22</a></h2>
+                <h2><a href="https://www.linkedin.com/in/finn-bergquist/" className="link">Finn Bergquist '22</a></h2>
                 <p> Bio </p>
             </div>
             <div class="column">
@@ -61,17 +61,34 @@ function About() {
                 
         </div>
 
-        <h2 class="text-uppercase"> Database Design </h2>
+        <h2 class="team-title"> Database Design </h2>
+        <div class="flex-container">
+            <div class="column">
+                <img className="avatar" src={git3} alt="Student Ahmed Hameed"/>
+                <h2><a href="https://www.linkedin.com/in/ahmed-hameed-521145166/" className="link">Ahmed Hameed '22</a></h2>
+                <p> Computer Science Major at Bowdoin College with an interest in Software Development. </p>
+            </div>
 
-        <h2 class="text-uppercase"> UX/UI </h2>
+        </div>
 
-        <h2 class="text-uppercase"> Mobile Application </h2>
+        <h2 class="team-title"> UX/UI </h2>
 
-        <h2 class="text-uppercase"> Data Collection </h2>
+        <h2 class="team-title"> Mobile Application </h2>
 
-        <h2 class="text-uppercase"> Alexa Voice Integration </h2>
+        <div class="flex-container">
+            <div class="column">
+                <img className="avatar" src={git3} alt="Student Adelaide Evans"/>
+                <h2><a href="#" className="link">Adelaide Evans '22</a></h2>
+                <p> Bio </p>
+            </div>
 
-        <h2 class="text-uppercase"> Tracking and Navigation </h2>
+        </div>
+
+        <h2 class="team-title"> Data Collection </h2>
+
+        <h2 class="team-title"> Alexa Voice Integration </h2>
+
+        <h2 class="team-title"> Tracking and Navigation </h2>
 
 
         </div>
