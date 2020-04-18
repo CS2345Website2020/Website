@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; 
 import '../../styles/AdminHome.css'
 import AdminArtList from './AdminArtList';
 
@@ -8,18 +9,19 @@ function AdminHome(props) {
             <h1 id="welcome-admin">Welcome, Admin!</h1>
             <div id="admin-home-container">
                 <div id="zone-container">
-                    <h4>Add Artwork</h4>
-                    <h4>Zone 2</h4>
-                    <h4>Zone 3</h4>
-                    <h4>Zone 4</h4>
-                    <h4>Zone 5</h4>
-                    <h4>Zone 6</h4>
+                    <Link to='/Admin/Add-Art'>
+                            <h4>Add Artwork</h4>
+                    </Link>
+                    <h4>Artists</h4>
+                    <h4>Creation Dates</h4>
+                    <h4>Types</h4>
+                    <h4>Medium and Support</h4>
+                    <h4>Zones</h4>
+                    <div id="divider"></div>
                     <div id="zone-bottom">
-                        <p>hello</p>
-                        <p>hello</p>
-                        <p>hello</p>
-                        <p>hello</p>
-                        <p>hello</p>
+                        <p>Settings</p>
+                        <p>Preferences</p>
+                        <p>Help</p>
                     </div>
                 </div>
                 <div id="admin-art-container">

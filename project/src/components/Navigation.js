@@ -62,11 +62,6 @@ function Navigation() {
                     </Link>
                 </div>
                 <div className="link-box">
-                    <Link to='/Admin/Add-Art' className="navLink">
-                        <h2 className="menuTitle">Add Artwork</h2>
-                    </Link>
-                </div>
-                <div className="link-box">
                     <Link to='/' onClick={() => {localStorage.removeItem("token"); setLogin(false); return "hello"}}className="navLink">
                         <div className="borderRight">
                             <h2 className="menuTitle">Logout</h2>

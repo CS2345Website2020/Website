@@ -1,42 +1,74 @@
 #admin-home-container {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
     flex-direction: row;
 }
 
+/* 
 #welcome-admin {
     border: 1px solid blue;
-}
+} */
 
 #zone-container {
-    border: 1px solid purple;
+    /* border: 1px solid purple; */
     width: 12%; 
+    text-align: left;
+    padding: 0 10px;
 }
 
-#zone-bottom {
+#divider {
+    width: 90%;
+    margin: 0 auto;
     border-top: 1px solid black;
 }
 
 #admin-art-container {
-    border: 1px solid darkgreen;
-    width: 100%; 
+    /* border: 1px solid darkgreen; */
+    width: 80%; 
+    background-color: rgb(207, 215, 233);
 }
 
-#admin-list-container {
-    border: 1px solid palevioletred;
+table, th, td {
+    border-bottom: 1px solid black;
+    border-collapse: collapse;
 }
 
-.admin-card {
-    border: 1px solid green; 
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid grey;
 }
 
-.admin-photo {
-    border: 1px solid firebrick;
+thead {
+    text-align: center;
+    border-bottom: 2px solid grey;
 }
 
-.admin-text-conteiner {
-    border: 1px solid gold;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+tbody {
+    text-align: left;
 }
+
+.row-Anumb {
+    width: 5%;
+}
+.row-Title {
+    width: 15%;
+}
+.row-Artist {
+    width: 10%;
+}
+.row-Type {
+    width: 5%;
+}
+.row-Medium {
+    width: 7%;
+}
+.row-Credit {
+    width: 10%;
+}
+.row-Desc {
+    width: 42%;
+}
+.row-Date {
+    width: 6%
+}
+

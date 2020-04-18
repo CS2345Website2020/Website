@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import AdminArtCard from './AdminArtCard';
-import ArtImgs from '../../images/artwork/index.js';
+// import ArtImgs from '../../images/artwork/index.js';
 
 function AdminArtList(props) {
     // initial state of art data 
@@ -31,17 +31,20 @@ function AdminArtList(props) {
 
     return (
         <table id="admin-list-container">
-            <tr>
-                {/* <th>Image</th> */}
-                <th>Title</th>
-                <th>Author</th>
-                <th>Creation Date</th>
-                <th>Type</th>
-                <th>Medium Support</th>
-                <th>Credit Line</th>
-                <th>Description</th>
-                <th>Accession Number</th>
-            </tr>
+            <thead>
+                <tr>
+                    {/* <th>Image</th> */}
+                    <th class="row-1 row-Anumb">Accession Number</th>
+                    <th class="row-2 row-Title">Title</th>
+                    <th class="row-3 row-Artist">Artist</th>
+                    <th class="row-4 row-Type">Type</th>
+                    <th class="row-5 row-Medium">Medium Support</th>
+                    <th class="row-6 row-Credit">Credit Line</th>
+                    <th class="row-7 row-Desc">Description</th>
+                    <th class="row-8 row-Date">Creation Date</th>
+                </tr>
+            </thead>
+            <tbody>
             {art.map(artwork => {    
                 
                 // find correct image 
@@ -50,6 +53,7 @@ function AdminArtList(props) {
                 // create an art card for each artwork 
                 return <AdminArtCard art={artwork} key={art.accession_number}/>
             })}
+            </tbody>
         </table>
     );
 }
