@@ -30,27 +30,27 @@ function AdminArtList(props) {
     
 
     return (
-        <section id="admin-list-container">
+        <table id="admin-list-container">
             <tr>
-                <th>Image</th>
+                {/* <th>Image</th> */}
                 <th>Title</th>
                 <th>Author</th>
                 <th>Creation Date</th>
                 <th>Type</th>
                 <th>Medium Support</th>
-                <th>Description</th>
                 <th>Credit Line</th>
+                <th>Description</th>
                 <th>Accession Number</th>
             </tr>
             {art.map(artwork => {    
                 
                 // find correct image 
-                let photo = ArtImgs.filter(image => image.id === parseInt(artwork.id))
+                // let photo = ArtImgs.filter(image => image.id === parseInt(artwork.id))
                 
                 // create an art card for each artwork 
-                return <AdminArtCard art={artwork} photo={photo[0].img} key={art.accession_number}/>
+                return <AdminArtCard art={artwork} key={art.accession_number}/>
             })}
-        </section>
+        </table>
     );
 }
 

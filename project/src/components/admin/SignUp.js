@@ -14,7 +14,7 @@ const SignUpForm = ({ errors, touched, values, handleSubmit, status, props}) => 
         if (status) {
             setAdmin(info => ({...admin, info}))
         }
-    }, [status]); 
+    }, [status, admin]); 
 
     return(
         <div id="sign-container">

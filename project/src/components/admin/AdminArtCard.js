@@ -3,7 +3,7 @@
  function AdminArtCard({ art, photo }) {
     return (
         <tr className="admin-card">
-            <td><img src={photo} alt={`${art.title} by ${art.artist}`} className="admin-photo"/></td>
+            {/* <td><img src={photo} alt={`${art.title} by ${art.artist}`} className="admin-photo"/></td> */}
             {/* <div className="admin-text-container"> */}
             <td>{art.title}</td>
             <td>{art.artist}</td>

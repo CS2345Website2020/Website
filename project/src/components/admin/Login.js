@@ -16,7 +16,7 @@ const LoginForm = ({ errors, touched, values, handleSubmit, status, props}) => {
         if (status) {
             setLogin(user => ({...login, user}))
         }
-    }, [status]); 
+    }, [status, login]); 
 
     return(
         <div id="login-container">
