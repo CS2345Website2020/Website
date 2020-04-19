@@ -16,35 +16,43 @@
     padding: 0 10px;
 }
 
+#zone-container .h4 {
+    font-size: larger;
+}
+
 #divider {
     width: 90%;
-    margin: 0 auto;
     border-top: 1px solid black;
 }
 
 #admin-art-container {
     /* border: 1px solid darkgreen; */
-    width: 80%; 
-    background-color: rgb(207, 215, 233);
+    width: 85%; 
+    /* background-color: rgb(207, 215, 233); */
+    margin-bottom: 50px;
 }
 
 table, th, td {
-    border-bottom: 1px solid black;
     border-collapse: collapse;
 }
 
 th, td {
     padding: 10px;
-    border-bottom: 1px solid grey;
+    /* border-bottom: 2px solid whitesmoke; */
+}
+
+td {
+    border-bottom: 3px solid white;
 }
 
 thead {
     text-align: center;
-    border-bottom: 2px solid grey;
+    background-color: rgb(217, 223, 236);
 }
 
 tbody {
     text-align: left;
+    background-color: rgb(235, 239, 247);
 }
 
 .row-Anumb {
@@ -60,15 +68,18 @@ tbody {
     width: 5%;
 }
 .row-Medium {
-    width: 7%;
+    width: 6%;
 }
 .row-Credit {
     width: 10%;
 }
 .row-Desc {
-    width: 42%;
+    width: 40%;
 }
 .row-Date {
-    width: 6%
+    width: 6%;
+}
+.row-Edit {
+    width: 4%;
 }
 

@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import '../../styles/AdminHome.css'
 import AdminArtList from './AdminArtList';
 
+// import {  } from 'react-icons/fa';
+
 function AdminHome(props) {
     return (
         <div>
@@ -20,7 +22,7 @@ function AdminHome(props) {
                     <div id="divider"></div>
                     <div id="zone-bottom">
                         <p>Settings</p>
-                        <p>Preferences</p>
+                        <p>Preferences</p> 
                         <p>Help</p>
                     </div>
                 </div>

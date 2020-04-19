@@ -26,7 +26,7 @@ function AdminArtList(props) {
         // call function to get data 
         getArtData(); 
 
-    }, []); 
+    }, [art]); 
     
 
     return (
@@ -42,6 +42,7 @@ function AdminArtList(props) {
                     <th class="row-6 row-Credit">Credit Line</th>
                     <th class="row-7 row-Desc">Description</th>
                     <th class="row-8 row-Date">Creation Date</th>
+                    <th class="row-9 row-Edit"></th>
                 </tr>
             </thead>
             <tbody>
