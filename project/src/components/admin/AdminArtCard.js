@@ -1,21 +1,54 @@
- import React from 'react';
+import React, { useState } from 'react';
+
+// icon 
+import { FiEdit } from 'react-icons/fi';
+
+// modal
+import Modal from 'react-modal';
+import EditArt from './EditArt';
+
+Modal.defaultStyles.overlay.backgroundColor = 'rgba(0,0,0,0.4)';
  
- function AdminArtCard({ art, photo }) {
+function AdminArtCard({ art }) {
+    
+    const [modalIsOpen,setIsOpen] = useState(false);
+    
+    const openModal = () => {
+        setIsOpen(true);
+    }
+   
+    const afterOpenModal = () => {
+        // references are now sync'd and can be accessed.
+        console.log('hi')
+    }
+   
+    const closeModal = () => {
+        setIsOpen(false);
+    }
+
     return (
-        <div className="admin-card">
-            <img src={photo} alt={`${art.title} by ${art.artist}`} className="admin-photo"/>
-            <div className="admin-text-container">
-                <h2>{art.title}</h2>
-                <h3>{art.artist}</h3>
-                <p>{art.creation_date}</p>
-                <p>{art.type}; {art.medium_support}</p>
-                <p>{art.credit_line}</p>
-                <p>{art.description}</p>
-                <p>{art.accession_number}</p>
-            </div>
-            <button>Edit</button>
-        </div>
+        <tr>
+            {/* <td><img src={photo} alt={`${art.title} by ${art.artist}`} className="admin-photo"/></td> */}
+            <td>{art.accession_number}</td>
+            <td>{art.title}</td>
+            <td>{art.artist}</td>
+            <td>{art.type}</td> 
+            <td>{art.medium_support}</td>
+            <td>{art.credit_line}</td>
+            <td>{art.description}</td>
+            <td>{art.creation_date}</td>
+            <td><FiEdit onClick={openModal}/></td>
+
+            <Modal
+            isOpen={modalIsOpen}
+            onAfterOpen={afterOpenModal}
+            onRequestClose={closeModal}
+            contentLabel="Edit Form"
+            >
+                <EditArt artId={art.id} closeModal={closeModal}/>
+            </Modal>
+        </tr>
     );
- }
+}
  
- export default AdminArtCard;
+export default AdminArtCard;
