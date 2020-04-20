@@ -6,7 +6,7 @@ import AdminArtCard from './AdminArtCard';
 import { FaSearch } from 'react-icons/fa';
 
 
-function AdminArtList(props) {
+function AdminArtList() {
     // initial state of art data 
     const [art, setArt] = useState([])
 
