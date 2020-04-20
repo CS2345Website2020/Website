@@ -2,34 +2,86 @@
     /* border: 1px solid red; */
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-evenly;
-}
-
-.art-card {
-    /* border: 1px solid blue; */
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    margin-bottom: 50px;
-    width: 30%; 
-    height: 700px;
-    display: flex;
-    flex-direction: column;
     justify-content: space-between;
+    width: 80%;
+    margin: 0 auto; 
 }
 
-.art-card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.3);
+.flip-image {
+  width: 350px;
+  height: 275px;
+  object-fit: cover;
 }
 
-.art-text-container {
-    /* border: 1px solid green; */
-    height: 45%;
-    
+.flip-card {
+  background-color: transparent;
+  width: 350px;
+  height: 300px;
+  /* border: 1px solid #f1f1f1; */
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  margin: 10px 0px;
 }
 
-.photo {
-    width: 100%;
-    height: 55%;
-    /* height: auto;  */
-    object-fit: cover;
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: white;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: rgb(210, 222, 235);
+  color: black;
+  transform: rotateY(180deg);
+}
+
+#flip-text {
+  text-align: left;
+  margin: 5px 10px; 
+}
+/* Display Art Styles */
+
+#display-container {
+  /* border: 1px solid red; */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: row;
+  width: 90%; 
+  margin: 0 auto; 
+}
+
+#display-image {
+  width: 450px;
+  height: auto;
+  object-fit: cover;
+}
+
+#display-info {
+  margin-top: 40px;
+  text-align: left;
 }
