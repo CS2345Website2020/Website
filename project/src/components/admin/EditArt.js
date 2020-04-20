@@ -38,6 +38,8 @@ function EditArt({ artId, closeModal }) {
 			.catch(error => {
 				console.log(error.response)
 			})
+		
+		// wait for a second before closing the modal 
 		setTimeout(function() { 
 			closeModal()
 		}, 1000);

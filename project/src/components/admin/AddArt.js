@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import '../../styles/AdminArt.css'
 
-function AddArt(props) {
-	console.log(props)
+function AddArt() {
+
 	const [art, setArt] = useState({
 		artist: "",
 		title: "",
@@ -23,7 +23,6 @@ function AddArt(props) {
 			.post(`https://artmuseumdraft.herokuapp.com/art`, art)
 			.then(response => {
 				console.log(response);
-				// props.history.push('/Admin')
 			})
 			.catch(error => {
 				console.log(error.response)

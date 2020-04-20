@@ -6,7 +6,6 @@ import { FiEdit } from 'react-icons/fi';
 // modal
 import Modal from 'react-modal';
 import EditArt from './EditArt';
-
 Modal.defaultStyles.overlay.backgroundColor = 'rgba(0,0,0,0.4)';
  
 function AdminArtCard({ art }) {

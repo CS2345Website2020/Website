@@ -9,6 +9,25 @@
     border: 1px solid blue;
 } */
 
+#search-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+#search-icon {
+    margin-top: 15px;
+    margin-right: 5px;
+}
+
+.search-input {
+    height: 30px;
+    width: 250px;
+    padding: 5px;
+    font-size: medium;
+}
+
 #zone-container {
     /* border: 1px solid purple; */
     width: 12%; 

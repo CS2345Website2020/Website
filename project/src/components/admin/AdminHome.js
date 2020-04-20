@@ -3,9 +3,7 @@ import { Link } from 'react-router-dom';
 import '../../styles/AdminHome.css'
 import AdminArtList from './AdminArtList';
 
-// import {  } from 'react-icons/fa';
-
-function AdminHome(props) {
+function AdminHome() {
     return (
         <div>
             <h1 id="welcome-admin">Welcome, Admin!</h1>
