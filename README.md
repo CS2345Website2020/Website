@@ -7,18 +7,14 @@
 - Liam Juskevice 
 - Ya'Kuana Davis 
 
-## Purpose 
-
-
-
 ## Back End  
 
-- [x] Template Database: https://artmuseumdraft.herokuapp.com/
-- [ ] Official Database: 
+- [x] Template Database - https://artmuseumdraft.herokuapp.com/
+- [ ] Official Database -
 
 ## Tech Stack 
 
-- React
+- React JS
 
 ##### Documentation 
 
