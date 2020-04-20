@@ -7,14 +7,14 @@ function Database() {
         <div>
             <h1>Database</h1>
             <div>
-                <h3>Token Art Piece</h3>
+                <h3 className="data-section-titles">Token Art Piece</h3>
                 <DisplayArt />
             </div>
             <div>
-                <h3>Art Cards</h3>
+                <h3 className="data-section-titles">Art Cards</h3>
                 <ArtList />
             </div>
-            <h3>Art Locations</h3>
+            <h3 className="data-section-titles">Location</h3>
         </div>
     );
 }
