@@ -4,7 +4,9 @@ import { Link } from 'react-router-dom';
 function Footer() {
     return(
         <div className="footer">
-            <Link to="/Admin" className="navLink">Admin Login</Link>
+            <Link to="/Admin" className="footer-link">
+                <p className="footer-text">Admin Login</p>
+                </Link>
         </div>
     )
 }
