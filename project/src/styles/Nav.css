@@ -32,7 +32,7 @@ img {
 .borderRight {
     margin: auto;
     display: flex;
-    height: 60%;
+    height: 75%;
     width: 100%;
     border-right: 1px solid #373737;
 }

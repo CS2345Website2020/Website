@@ -15,11 +15,13 @@ import SignUp from './components/admin/SignUp';
 import AdminHome from './components/admin/AdminHome';
 import EditArt from './components/admin/EditArt';
 import AddArt from './components/admin/AddArt';
+import Footer from './components/Footer'
 
 
 function App() {
   return (
     <div className="App">
+      <div className="page-content">
       <Navigation/>
       <Route path="/" exact component={Home}></Route>
       <Route path="/Database" component={Database}></Route>
@@ -31,6 +33,8 @@ function App() {
       <PrivateRoute path="/Admin" exact component={AdminHome} />
       <PrivateRoute path="/Admin/Art/:id" component={EditArt} />
       <PrivateRoute path="/Admin/Add-Art" component={AddArt} />
+      </div>
+      <Footer/>
     </div>
   );
 }
