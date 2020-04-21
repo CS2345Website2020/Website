@@ -8,6 +8,9 @@ import '../styles/about.css';
 import StacyDoore from '../images/meet-the-team/stacy-doore.jpeg'
 import EmmeMcCabe from '../images/meet-the-team/emme-mccabe2.jpeg'
 import YakuanaDavis from '../images/meet-the-team/yakuana-davis.jpeg'
+import KateMorrison from '../images/meet-the-team/kate-morrison.jpeg'
+import FinnBergquist from '../images/meet-the-team/finn-bergquist.jpeg'
+
 import git2 from '../images/meet-the-team/36675751.png'
 import git3 from '../images/meet-the-team/36677169.png'
 import git4 from '../images/meet-the-team/34076044.png'
@@ -38,7 +41,7 @@ function About() {
 
         <div class="flex-container">
             <div class="column">
-                <img className="avatar" src={git3} alt="Student Finn Bergquist "/>
+                <img className="avatar" src={FinnBergquist} alt="Student Finn Bergquist "/>
                 <h2><a href="https://www.linkedin.com/in/finn-bergquist/" className="link">Finn Bergquist '22</a></h2>
                 <p> Bio </p>
             </div>
@@ -79,7 +82,12 @@ function About() {
             <div class="column">
                 <img className="avatar" src={git3} alt="Student Adelaide Evans"/>
                 <h2><a href="#" className="link">Adelaide Evans '22</a></h2>
-                <p> Bio </p>
+                <p>  </p>
+            </div>
+            <div class="column">
+                <img className="avatar" src={KateMorrison} alt="Student Kate Morrison"/>
+                <h2><a href="https://www.linkedin.com/in/kathleen-morrison-780372156/" className="link">Kate Morrison '20</a></h2>
+                <p>  </p>
             </div>
 
         </div>
