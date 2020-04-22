@@ -1,7 +1,35 @@
 .banner {
     background-image: url("../images/HomePic1.jpeg");
-    background-size: 2500px;
+    background-size: 2700px;
     background-position-x: center;
-    background-position-y: 20%;
-    height: 400px;
+    background-position-y: 15%;
+    height: 97vh;
+    position: relative;
+}
+
+.home-text {
+    color: white;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 70px;
+}
+
+.shadow-boxing {
+    bottom: 0;
+    position: absolute;
+    background-color: rgba(0,0,0,0.6);
+    width: 100%;
+}
+
+.virtual-tour {
+    height: 500px;
+}
+
+.welcome {
+    font-family: Fira Sans;
+    font-size: 60px;
+    color: white;
+    margin: 10px;
+    opacity: 1;
 }
