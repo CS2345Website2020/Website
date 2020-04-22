@@ -117,7 +117,7 @@ function About() {
             <div class="column">
                 <img className="avatar" src={TravisRase} alt="Student Travis Rase"/>
                 <h2><a href="https://www.linkedin.com/in/travis-rase-763b9514b/" className="link">Travis Rase '20</a></h2>
-                <p> Computer Science major and Physics minor deeply passionate about software engineering and becoming a trophy husband.  </p>
+                <p> Computer Science major and Physics minor deeply passionate about software engineering.  </p>
             </div>
 
         </div>
