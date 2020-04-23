@@ -64,7 +64,7 @@ function AdminArtList() {
             </div>
             <table id="admin-list-container">
                 <thead>
-                    <tr>
+                    <tr key="row-first">
                         {/* <th>Image</th> */}
                         <th className="row-1 row-Anumb" key="row-Anumb">Accession Number</th>
                         <th className="row-2 row-Title" key="row-Title">Title</th>

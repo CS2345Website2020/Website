@@ -5,19 +5,23 @@ import '../../styles/AdminArt.css'
 function AddArt() {
 
 	const [art, setArt] = useState({
-		artist: "",
 		title: "",
-		type: "",
-		medium_support: "",
-		description: "",
-		creation_date: "",
-		credit_line: "",
-		accession_number: ""
-	}); 
+		description_thematic: "",
+		description_basic: "",
+		description_spatial: "",
+		country_origin: "",
+		accession_number: "",
+		artistId: "",                       
+		categoryId: "",                	   
+		ownerId: "",                        
+		geometryId: ""                      
+	})
 
 	const handleChange = event => setArt({...art, [event.target.name]: event.target.value})
-
+	
 	const handleSubmit = event => {
+		// remember to change the ids to ints using parseInt
+
 		event.preventDefault(); 
 		axios
 			.post(`https://artmuseumdraft.herokuapp.com/art`, art)
@@ -35,13 +39,6 @@ function AddArt() {
 			<p>Please fill in all sections of the form completely.</p>
 			<p>If the artwork is missing information, enter 'Not Available' in the input field.</p>
 			<form onSubmit={handleSubmit} id="art-form">
-				<h3 className="add-placeholder">Artist</h3>
-				<input type="text"
-						name="artist"
-						placeholder="Enter Artist"
-						value={art.artist}
-						className="art-input"
-						onChange={handleChange} />
 				<h3 className="add-placeholder">Title</h3>
 				<input type="text"
 						name="title"
@@ -49,39 +46,60 @@ function AddArt() {
 						value={art.title}
 						className="art-input"
 						onChange={handleChange} />
-				<h3 className="add-placeholder">Type</h3>
-				<input type="text"
-						name="type"
-						placeholder="Enter Type"
-						value={art.type}
-						className="art-input"
-						onChange={handleChange} />
-				<h3 className="add-placeholder">Medium Support</h3>
-				<input type="text"
-						name="medium_support"
-						placeholder="Enter Medium And Support"
-						value={art.medium_support}
-						className="art-input"
-						onChange={handleChange} />
-				<h3 className="add-placeholder">Description</h3>
+				<h3 className="add-placeholder">Basic Description</h3>
 				<textarea type="text"
-						name="description"
-						placeholder="Enter Description"
-						value={art.description}
+						name="description_basic"
+						placeholder="Enter Basic Description"
+						value={art.description_basic}
+						className="art-input"
+						onChange={handleChange} ></textarea>
+				<h3 className="add-placeholder">Spatial Description</h3>
+				<textarea type="text"
+						name="description_spatial"
+						placeholder="Enter Spacial Description"
+						value={art.description_spatial}
 						className="description-input"
 						onChange={handleChange} ></textarea>
-				<h3 className="add-placeholder">Creation Date</h3>
+				<h3 className="add-placeholder">Thematic Description</h3>
+				<textarea type="text"
+						name="description_thematic"
+						placeholder="Enter Thematic Descriptiond"
+						value={art.description_thematic}
+						className="description-input"
+						onChange={handleChange} ></textarea>
+				<h3 className="add-placeholder">Country of Origin</h3>
 				<input type="text"
-						name="creation_date"
-						placeholder="Enter Creation Date"
-						value={art.creation_date}
+						name="country_origin"
+						placeholder="Enter Country of Origin"
+						value={art.country_origin}
 						className="art-input"
 						onChange={handleChange} />
-				<h3 className="add-placeholder">Credit Line</h3>
+				<h3 className="add-placeholder">Artist ID</h3>
 				<input type="text"
-						name="credit_line"
-						placeholder="Enter Credit Line"
-						value={art.credit_line}
+						name="artistId"
+						placeholder="Enter Artist ID"
+						value={art.artistId}
+						className="art-input"
+						onChange={handleChange} />
+				<h3 className="add-placeholder">Category ID</h3>
+				<input type="text"
+						name="categoryId"
+						placeholder="Enter Category ID"
+						value={art.categoryId}
+						className="art-input"
+						onChange={handleChange} />
+				<h3 className="add-placeholder">Owner ID</h3>
+				<input type="text"
+						name="ownerId"
+						placeholder="Enter Owner ID"
+						value={art.ownerId}
+						className="art-input"
+						onChange={handleChange} />
+				<h3 className="add-placeholder">Geometry ID</h3>
+				<input type="text"
+						name="geometryId"
+						placeholder="Enter Geometry ID"
+						value={art.geometryId}
 						className="art-input"
 						onChange={handleChange} />
 				<h3 className="add-placeholder">Accession Number</h3>
@@ -100,3 +118,19 @@ function AddArt() {
 
 export default AddArt;
 
+/** 
+	Mock Database Art Object 
+
+		const [art, setArt] = useState({
+			artist: "",
+			title: "",
+			type: "",
+			medium_support: "",
+			description: "",
+			creation_date: "",
+			credit_line: "",
+			accession_number: ""
+		}); 
+
+*/
+	
