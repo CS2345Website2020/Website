@@ -17,7 +17,7 @@ function Home() {
         </div>
         </div>
         <br></br>
-        <img src={GalleryPhoto} className="virtual-tour" alt="Photo of room in art museum showcasing European and American works"></img>
+        <img src={GalleryPhoto} className="virtual-tour" alt="Room in art museum showcasing European and American works"></img>
         </div>
     );
 }

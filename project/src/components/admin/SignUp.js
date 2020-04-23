@@ -4,7 +4,16 @@ import * as Yup from 'yup';
 import axios from 'axios';
 import '../../styles/LoginSign.css'
 
-const SignUpForm = ({ errors, touched, values, handleSubmit, status, props}) => {
+const SignUpForm = (props, { status }) => {
+    // used with formik and yup validation 
+    const {
+        values,
+        touched,
+        errors,
+        handleChange,
+        handleBlur,
+        handleSubmit,
+    } = props;
 
     // hook keeps track of login information 
     const [admin, setAdmin] = useState({});
@@ -22,7 +31,10 @@ const SignUpForm = ({ errors, touched, values, handleSubmit, status, props}) => 
                 <h1>Sign Up</h1>
                 <p>Please fill in this form to create an account.</p>
             </div>
-            <Form className="form">
+            <Form 
+                className="form"
+                onSubmit={handleSubmit}
+            >
                 {/* username */}
                 <h2 className="placeholder">Username</h2>
                 <Field 
@@ -30,8 +42,11 @@ const SignUpForm = ({ errors, touched, values, handleSubmit, status, props}) => 
                     name="username" 
                     placeholder="Username"
                     className="text-field"
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    value={values.username}
                 />
-                {touched.name && errors.name && ( <p className="error">{errors.name}</p> )}
+                {touched.username && errors.username && ( <p className="error">{errors.username}</p> )}
 
 
                 {/* password */}
@@ -41,8 +56,11 @@ const SignUpForm = ({ errors, touched, values, handleSubmit, status, props}) => 
                     name="password" 
                     placeholder="Password" 
                     className="text-field"
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    value={values.password}
                 />
-                {touched.name && errors.name && <p className="error">{errors.name}</p>}
+                {touched.password && errors.password && <p className="error">{errors.password}</p>}
 
                 <p>By creating an account to our <a href="https://library.bowdoin.edu/">Terms and Privacy</a>.</p>
                 <button type="submit" className="button">Submit</button>
@@ -66,10 +84,11 @@ const SignUp = withFormik({
     validationSchema: Yup.object().shape({
         username: Yup
         .string()
-        .required("Please Enter Your Username"),
+        .required("Please Enter A Valid Username"),
         password: Yup
         .string()
-        .required("Please Enter Your Password"),
+        .min(4)
+        .required("Password Must Be More Than 3 Characters"),
     }),
     
     // update values and set status 
