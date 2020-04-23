@@ -56,7 +56,7 @@ function About() {
             <div className="column">
                 <img className="avatar" src={YakuanaDavis} alt="Student Ya'Kuana Davis"/>
                 <h2><a href="https://github.com/yakuana" className="link">Ya'Kuana Davis '21</a></h2>
-                <p> Full-time student at Bowdoin College and Lambda School studying Computer Science and Web Devolpment. </p>
+                <p> Computer Science and Asian Studies double major. Full Stack Web Devolpment student at Lambda School. </p>
             </div> 
             <div className="column">
                 <img className="avatar" src={git4} alt="Student Liam Juskevice"/>
