@@ -28,7 +28,7 @@ import BradIngersoll from '../images/meet-the-team/brad-ingersoll.jpeg'
 
 
 //git images
-// import git2 from '../images/meet-the-team/36675751.png'
+import git2 from '../images/meet-the-team/36675751.png'
 import git3 from '../images/meet-the-team/36677169.png'
 import git4 from '../images/meet-the-team/34076044.png'
 import git5 from '../images/meet-the-team/10201229.png'
@@ -109,9 +109,9 @@ function About() {
                 <p> Sociology major and CS minor. </p>
             </div>
             <div className="column">
-                <img className="avatar" src={git5} alt="Student Bradley Ingersoll '21"/>
-                <h2><a href="/#" className="link">Bradley Ingersoll '21</a></h2>
-                <p> Bio </p>
+                <img className="avatar" src={BradIngersoll} alt="Student Bradley Ingersoll '21"/>
+                <h2><a href="https://www.linkedin.com/mwlite/in/bradley-ingersoll-8b903417b" className="link">Bradley Ingersoll '21</a></h2>
+                <p> Computer Science major with an interest in big data and digital marketing  </p>
             </div>
         </div>
 
@@ -174,7 +174,7 @@ function About() {
         <h2 class="team-title"> Tracking and Navigation </h2>
         <div class="flex-container">
         <div class="column">
-                <img className="avatar" src={GeorgeBenz} alt="Student George benz"/>
+                <img className="avatar" src={GeorgeBenz} alt="Student George Benz"/>
                 <h2><a href="https://www.linkedin.com/in/george-benz/" className="link">George Benz '20</a></h2>
                 <p> Full-time passion student at Bowdoin college looking for any kind of work in the Computer Science Sector and other relevant Sectors </p>
         </div>
@@ -188,9 +188,7 @@ function About() {
                 <h2><a href="https://www.linkedin.com/in/alexandra-hummel3/" className="link">Aly Hummel '21</a></h2>
                 <p> CS and Government major and Duolingo addict. </p>
         </div>
-
         </div>
-
         </div>
     
     );
