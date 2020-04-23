@@ -92,7 +92,7 @@ function About() {
             </div>
             <div class="column">
                 <img className="avatar" src={git5} alt="Student Bradley Ingersoll '21"/>
-                <h2><a href="#" className="link">Bradley Ingersoll '21</a></h2>
+                <h2><a href="/#" className="link">Bradley Ingersoll '21</a></h2>
                 <p> Bio </p>
             </div>
         </div>
@@ -102,7 +102,7 @@ function About() {
         <div class="flex-container">
             <div class="column">
                 <img className="avatar" src={git3} alt="Student Adelaide Evans"/>
-                <h2><a href="#" className="link">Adelaide Evans '22</a></h2>
+                <h2><a href="/#" className="link">Adelaide Evans '22</a></h2>
                 <p>  </p>
             </div>
             <div class="column">

@@ -6,7 +6,16 @@ import axios from 'axios';
 
 
 
-const LoginForm = ({ errors, touched, values, handleSubmit, status, props}) => {
+const LoginForm = (props, { status }) => {
+    
+    const {
+        values,
+        touched,
+        errors,
+        handleChange,
+        handleBlur,
+        handleSubmit,
+    } = props;
 
     // hook keeps track of login information 
     const [login, setLogin] = useState({});
@@ -22,7 +31,10 @@ const LoginForm = ({ errors, touched, values, handleSubmit, status, props}) => {
         <div id="login-container">
             <h1>Sign In</h1>
 
-            <Form className="form">
+            <Form 
+                className="form"
+                onSubmit={handleSubmit}
+                >
                 {/* username */}
                 <h2 className="placeholder">Username</h2>
                 <Field 
@@ -30,8 +42,11 @@ const LoginForm = ({ errors, touched, values, handleSubmit, status, props}) => {
                     name="username" 
                     placeholder="Username"
                     className="text-field"
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    value={values.username}
                 />
-                {touched.name && errors.name && ( <p className="error">{errors.name}</p> )}
+                {touched.username && errors.username && ( <p className="error">{errors.username}</p> )}
 
 
                 {/* password */}
@@ -41,8 +56,11 @@ const LoginForm = ({ errors, touched, values, handleSubmit, status, props}) => {
                     name="password" 
                     placeholder="Password" 
                     className="text-field"
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    value={values.password}
                 />
-                {touched.name && errors.name && <p className="error">{errors.name}</p>}
+                {touched.password && errors.password && <p className="error">{errors.password}</p>}
 
                 <button type="submit" className="button">Submit</button>
 

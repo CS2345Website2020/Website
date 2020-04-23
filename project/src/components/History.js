@@ -3,8 +3,6 @@ import { Timeline, TimelineItem }  from 'vertical-timeline-component-for-react';
 import '../styles/about.css';
 
 //images
-import Blueprint from '../images/blueprint.png'
-import GalleryPhoto from '../images/gallery.png'
 import TeamPhoto from '../images/DemoDay.png'
 import Database from '../images/Database.png'
 
@@ -26,7 +24,7 @@ function PHistory() {
                 database design, application development, computer tracking, and voice interface. The 
                 students were divided up into teams to work on each task. 
                 </p>
-                <img src = {TeamPhoto} alt='photo of gallery'></img>
+                <img src = {TeamPhoto} alt="Last year's team displaying their worrk in the gallery"></img>
                 
                 <p>
                 They accomplished a lot but ran into some problems on the way. One of these included 
@@ -34,7 +32,7 @@ function PHistory() {
                 all the teams. The course's core curriculum is focused on database design, and this 
                 project truly reinforces that. This is a visual depiction of their database.
                 </p>
-                <img src = {Database} alt='photo of gallery'></img>
+                <img src = {Database} alt="2019 visual layout of database"></img>
             </TimelineItem>
 
             <TimelineItem

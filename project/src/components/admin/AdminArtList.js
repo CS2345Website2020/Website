@@ -12,6 +12,18 @@ function AdminArtList() {
 
     // search bar state 
     const [search, setSearch] = useState("")
+
+    // loop through art object 
+    const loopObj = (artObj) => {
+        for (let [key, value] of Object.entries(artObj)) {
+            console.log(`key ${key}, value ${value}`);
+            if (key === "id") {
+                continue
+            } else if (value.toLowerCase().includes(search)) {
+                return <AdminArtCard art={artObj} key={artObj.accession_number}/>
+            }
+        }
+    }
     
     useEffect(() => {
         const getArtData = () => {
@@ -54,27 +66,21 @@ function AdminArtList() {
                 <thead>
                     <tr>
                         {/* <th>Image</th> */}
-                        <th class="row-1 row-Anumb">Accession Number</th>
-                        <th class="row-2 row-Title">Title</th>
-                        <th class="row-3 row-Artist">Artist</th>
-                        <th class="row-4 row-Type">Type</th>
-                        <th class="row-5 row-Medium">Medium Support</th>
-                        <th class="row-6 row-Credit">Credit Line</th>
-                        <th class="row-7 row-Desc">Description</th>
-                        <th class="row-8 row-Date">Creation Date</th>
-                        <th class="row-9 row-Edit"></th>
+                        <th className="row-1 row-Anumb" key="row-Anumb">Accession Number</th>
+                        <th className="row-2 row-Title" key="row-Title">Title</th>
+                        <th className="row-3 row-Artist" key="row-Artist">Artist</th>
+                        <th className="row-4 row-Type" key="row-Type">Type</th>
+                        <th className="row-5 row-Medium" key="row-Medium">Medium Support</th>
+                        <th className="row-6 row-Credit" key="row-Credit">Credit Line</th>
+                        <th className="row-7 row-Desc" key="row-Desc">Description</th>
+                        <th className="row-8 row-Date" key="row-Date">Creation Date</th>
+                        <th className="row-9 row-Edit" key="row-Edit"></th>
+                        <th className="row-10 row-Delete" key="row-Delete"></th>
                     </tr>
                 </thead>
                 <tbody>
                 {search ? art.map(artwork => {
-                    for (let [key, value] of Object.entries(artwork)) {
-                        console.log(`key ${key}, value ${value}`);
-                        if (key === "id") {
-                            continue
-                        } else if (value.toLowerCase().includes(search)) {
-                            return <AdminArtCard art={artwork} key={art.accession_number}/>
-                        }
-                    }
+                    return loopObj(artwork)
                 }) : art.map(artwork => {    
                     
                     // create an art card for each artwork 
