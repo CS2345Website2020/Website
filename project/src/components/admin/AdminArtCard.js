@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 
-// icon 
+// icons
 import { FiEdit } from 'react-icons/fi';
+import { FaTrash } from 'react-icons/fa';
 
 // modal
 import Modal from 'react-modal';
@@ -25,6 +27,25 @@ function AdminArtCard({ art }) {
         setIsOpen(false);
     }
 
+    const confirmDelete = () => {
+        if (window.confirm("Are you sure you wish to delete this item?")) {
+           handleDelete()
+        }
+    }
+
+    const handleDelete = (event) => {
+        event.preventDefault(); 
+		axios
+			.delete(`https://artmuseumdraft.herokuapp.com/art/${art.id}`)
+			.then(response => {
+				console.log(response);
+			})
+			.catch(error => {
+				console.log(error.response)
+			})
+    }
+
+
     return (
         <tr>
             {/* <td><img src={photo} alt={`${art.title} by ${art.artist}`} className="admin-photo"/></td> */}
@@ -37,6 +58,7 @@ function AdminArtCard({ art }) {
             <td>{art.description}</td>
             <td>{art.creation_date}</td>
             <td><FiEdit onClick={openModal}/></td>
+            <td><FaTrash onClick={confirmDelete}/></td>
 
             <Modal
             isOpen={modalIsOpen}
