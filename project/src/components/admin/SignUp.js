@@ -34,7 +34,33 @@ const SignUpForm = (props, { status }) => {
             <Form 
                 className="form"
                 onSubmit={handleSubmit}
-            >
+            >   
+                {/* first name */}
+                <h2 className="placeholder">First Name</h2>
+                <Field 
+                    type="text" 
+                    name="firstName" 
+                    placeholder="Enter First Name"
+                    className="text-field"
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    value={values.firstName}
+                />
+                {touched.firstName && errors.firstName && ( <p className="error">{errors.firstName}</p> )}
+
+                {/* last name */}
+                <h2 className="placeholder">Last Name</h2>
+                <Field 
+                    type="text" 
+                    name="lastName" 
+                    placeholder="Enter Last Name"
+                    className="text-field"
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    value={values.lastName}
+                />
+                {touched.lastName && errors.lastName && ( <p className="error">{errors.lastName}</p> )}
+
                 {/* username */}
                 <h2 className="placeholder">Username</h2>
                 <Field 
@@ -73,15 +99,23 @@ const SignUpForm = (props, { status }) => {
 const SignUp = withFormik({
     
     // making sure each prop has a default value if given value is undefined 
-    mapPropsToValues({ username, password }) {
-      return {
-        username: username || "",
-        password: password || ""
-      };
+    mapPropsToValues({ username, password, firstName, lastName }) {
+        return {
+            firstName: firstName || "",
+            lastName: lastName || "",
+            username: username || "",
+            password: password || ""
+        };
     },
     
     // use yup to enforce input requirements 
     validationSchema: Yup.object().shape({
+        firstName: Yup
+        .string()
+        .required(),
+        lastName: Yup
+        .string() 
+        .required(),
         username: Yup
         .string()
         .required("Please Enter A Valid Username"),
@@ -96,10 +130,10 @@ const SignUp = withFormik({
         // console.log("values, props", values, props)
         
         axios
-            .post('https://artmuseumdraft.herokuapp.com/auth/register', values)
+            .post('https://cs2345-db-api.herokuapp.com/admin', values)
             .then(response => {
                 // successful 
-                console.log("post login api response object", response.data);
+                console.log("sign up form api response object", response.data);
                 
                 props.history.push('/Admin/Login')
             }) 

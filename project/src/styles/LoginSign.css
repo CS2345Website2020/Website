@@ -17,7 +17,7 @@
 /* signup styles */
 
 #sign-container {
-    height: 550px;
+    /* height: 0px; */
     max-width: 30%;
     margin: 50px auto;
     display: flex;
@@ -60,7 +60,7 @@
     background-color: #4CAF50;
     color: white;
     padding: 14px 20px;
-    margin: 20px auto;
+    margin: 20px auto 30px auto;
     border: none;
     cursor: pointer;
     width: 30%;

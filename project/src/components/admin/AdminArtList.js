@@ -59,7 +59,7 @@ function AdminArtList() {
                     name="search"
                     className="search-input"
                     onChange={handleSearch}
-                    placeholder="Search..."
+                    placeholder="Search.."
                 />
             </div>
             <table id="admin-list-container">

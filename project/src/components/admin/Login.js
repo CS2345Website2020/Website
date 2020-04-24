@@ -4,8 +4,6 @@ import { Form, Field, withFormik } from 'formik';
 import * as Yup from 'yup';
 import axios from 'axios';
 
-
-
 const LoginForm = (props, { status }) => {
     
     const {
@@ -35,12 +33,13 @@ const LoginForm = (props, { status }) => {
                 className="form"
                 onSubmit={handleSubmit}
                 >
+
                 {/* username */}
                 <h2 className="placeholder">Username</h2>
                 <Field 
                     type="text" 
                     name="username" 
-                    placeholder="Username"
+                    placeholder="Enter Username"
                     className="text-field"
                     onChange={handleChange}
                     onBlur={handleBlur}
@@ -54,7 +53,7 @@ const LoginForm = (props, { status }) => {
                 <Field 
                     type="password" 
                     name="password" 
-                    placeholder="Password" 
+                    placeholder="Enter Password" 
                     className="text-field"
                     onChange={handleChange}
                     onBlur={handleBlur}
@@ -75,10 +74,10 @@ const Login = withFormik({
     
     // making sure each prop has a default value if given value is undefined 
     mapPropsToValues({ username, password }) {
-      return {
-        username: username || "",
-        password: password || ""
-      };
+        return {
+            username: username || "",
+            password: password || ""
+        };
     },
     
     // use yup to enforce input requirements 
@@ -92,16 +91,16 @@ const Login = withFormik({
     }),
     
     // update values and set status 
-    handleSubmit(values, { resetForm, props, setStatus }) {
+    handleSubmit(values, { resetForm, props }) {
         // console.log("values, props", values, props)
         
         axios
-            .post('https://artmuseumdraft.herokuapp.com/auth/login', values)
+            .post('https://cs2345-db-api.herokuapp.com/admin/login', values)
             .then(response => {
                 // successful 
                 console.log("post login api response object", response.data);
                 
-                localStorage.setItem('token', response.data.token);
+                localStorage.setItem('token', response.data.jwt);
 
                 props.history.push('/Admin')
             }) 

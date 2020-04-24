@@ -13,8 +13,7 @@ import ArtList from './components/ArtList';
 import Login from './components/admin/Login';
 import SignUp from './components/admin/SignUp';
 import AdminHome from './components/admin/AdminHome';
-import EditArt from './components/admin/EditArt';
-import AddArt from './components/admin/AddArt';
+import AddArtForm from './components/admin/AddArtForm';
 import Footer from './components/Footer'
 
 
@@ -31,8 +30,9 @@ function App() {
       <Route path="/Admin/Login" component={Login}></Route>
       <Route path="/Admin/Register" component={SignUp}></Route>
       <PrivateRoute path="/Admin" exact component={AdminHome} />
-      <PrivateRoute path="/Admin/Art/:id" component={EditArt} />
-      <PrivateRoute path="/Admin/Add-Art" component={AddArt} />
+      <PrivateRoute path="/Admin/Add-Art" component={AddArtForm} />
+      <PrivateRoute path="/Admin/Add-Category" component={AddArtForm} />
+      <PrivateRoute path="/Admin/Add-Location" component={AddArtForm} />
       </div>
       <Footer/>
     </div>
