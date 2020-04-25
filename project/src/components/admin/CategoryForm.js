@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Form, Field, withFormik } from 'formik';
 import * as Yup from 'yup';
-import axios from 'axios';
+import { axiosWithAuth } from './axiosWithAuth.js';
+import '../../styles/AdminForms.css'
 
 const AddCategory = (props, { status }) => {
     // used with formik and yup validation 
@@ -30,7 +31,8 @@ const AddCategory = (props, { status }) => {
     return (
         <div id="category-container">
             <h1>Create a Category</h1>
-
+            <p>Please fill in all sections of the form completely.</p>
+			<p>If missing information, please enter <strong>'Not Available'</strong> in the input field.</p>
             <Form 
                 id="category-form"
                 onSubmit={handleSubmit}
@@ -41,7 +43,7 @@ const AddCategory = (props, { status }) => {
                     type="text" 
                     name="name" 
                     placeholder="Enter Category Name"
-                    className="art-input"
+                    className="input"
                     onChange={handleChange}
                     onBlur={handleBlur}
                     value={values.name}
@@ -52,9 +54,10 @@ const AddCategory = (props, { status }) => {
                 <h2 className="placeholder">Definition</h2>
                 <Field 
                     type="text" 
+                    component="textarea"
                     name="definition" 
                     placeholder="Enter Category Definition" 
-                    className="art-input"
+                    className="description-input"
                     onChange={handleChange}
                     onBlur={handleBlur}
                     value={values.definition}
@@ -67,14 +70,17 @@ const AddCategory = (props, { status }) => {
                     type="text" 
                     name="tag" 
                     placeholder="Enter Category Tag"
-                    className="art-input"
+                    className="input"
                     onChange={handleChange}
                     onBlur={handleBlur}
                     value={values.tag}
                 />
                 {touched.tag && errors.tag && ( <p className="error">{errors.tag}</p> )}
 
-                <button type="submit" id="add-button"><span>Submit</span></button>
+                <div className="form-buttons">
+                    <button type="submit" className="submit-button"><span>Submit</span></button>
+                    <button className="cancel-button" onClick={() => props.history.push('/Admin')}><span>Cancel</span></button>
+                </div>
             </Form>
         </div>
     );
@@ -107,12 +113,11 @@ const CategoryForm = withFormik({
     handleSubmit(values, { resetForm, props }) {
         console.log("category form values, props", values, props)
 
-		axios
+		axiosWithAuth()
             .post('https://cs2345-db-api.herokuapp.com/category', values)
             .then(response => {
                 // successful 
-                console.log("add art form api response object", response.data);
-                
+                console.log("category form api response object", response.data);
             }) 
 
             .catch(error => {

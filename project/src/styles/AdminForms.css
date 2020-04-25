@@ -30,9 +30,9 @@
 .form-buttons {
     display: flex;
     direction: row;
-    justify-content: space-evenly;
-    width: 80%;
-    margin: 0px auto 30px auto; 
+    justify-content: space-between;
+    width: 340px;
+    margin: 5px auto 30px auto; 
 }
 
 .submit-button {
@@ -333,7 +333,7 @@
     right: 0;
 }
 
-/* Add Artist Form */
+/* Artist Form */
 
 #artist-container {
     height: 100vh;
@@ -348,4 +348,40 @@
     margin: 0px auto;
     padding-top: 20px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+/* Category Form */
+
+#category-container {
+    padding-bottom: 100px; 
+}
+
+#category-form {
+    background: white;
+    display: flex; 
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0px auto;
+    padding-top: 20px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+/* Owner Form */
+
+#owner-container {
+    padding-bottom: 100px; 
+}
+
+#owner-form {
+    background: white;
+    display: flex; 
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0px auto;
+    padding-top: 20px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+#space {
+    height: 15px
 }

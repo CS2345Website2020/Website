@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Form, Field, withFormik } from 'formik';
 import * as Yup from 'yup';
-// import axios from 'axios';
+import { axiosWithAuth } from './axiosWithAuth.js'; 
+import '../../styles/AdminForms.css';
 
 const AddOwner = (props, { status }) => {
     // used with formik and yup validation 
@@ -25,10 +26,11 @@ const AddOwner = (props, { status }) => {
 
     return (
         <div id="owner-container">
-            <h1>Create an Owner</h1>
+            <h1>New Owner Form</h1>
+            <p>Please fill in all sections of the form completely.</p>
 
             <Form 
-                className="artist-form"
+                id="owner-form"
                 onSubmit={handleSubmit}
             >
                 {/* first name */}
@@ -37,7 +39,7 @@ const AddOwner = (props, { status }) => {
                     type="text" 
                     name="firstName" 
                     placeholder="First Name"
-                    className="text-field"
+                    className="input"
                     onChange={handleChange}
                     onBlur={handleBlur}
                     value={values.firstName}
@@ -50,14 +52,19 @@ const AddOwner = (props, { status }) => {
                     type="test" 
                     name="lastName" 
                     placeholder="Last Name" 
-                    className="text-field"
+                    className="input"
                     onChange={handleChange}
                     onBlur={handleBlur}
                     value={values.lastName}
                 />
                 {touched.lastName && errors.lastName && <p className="error">{errors.lastName}</p>}
 
-                <button type="submit" className="button">Submit</button>
+                <div id="space"></div>
+
+                <div className="form-buttons">
+                    <button type="submit" className="submit-button"><span>Submit</span></button>
+                    <button className="cancel-button" onClick={() => props.history.push('/Admin')}><span>Cancel</span></button>
+                </div>
             </Form>
         </div>
     );
@@ -87,8 +94,20 @@ const OwnerForm = withFormik({
     // update values and set status 
     handleSubmit(values, { resetForm, props }) {
         console.log("owner form values, props", values, props)
-    
-        resetForm(); 
+
+        axiosWithAuth()
+            .post('https://cs2345-db-api.herokuapp.com/owner', values)
+            .then(response => {
+                // successful 
+                console.log("owner form api response object", response.data);
+            }) 
+
+            .catch(error => {
+                // unsuccessful 
+                console.log("The api is currently down.", error.response);
+            });
+
+        resetForm();
     }
 })(AddOwner)
 
