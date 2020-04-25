@@ -8,15 +8,27 @@ function AdminHome() {
         <div>
             <h1 id="welcome-admin">Welcome, Admin!</h1>
             <div id="admin-home-container">
-                <div id="zone-container">
+                <div id="dash-container">
+                    <h4 id="dash">Dashboard</h4>
+                    <Link to='/Admin/Add-Artist'>
+                            <h4>Add Artist</h4>
+                    </Link>
+                    <Link to='/Admin/Add-Category'>
+                            <h4>Add Category</h4>
+                    </Link>
+                    <Link to='/Admin/Add-Owner'>
+                            <h4>Add Owner</h4>
+                    </Link>
+                    <Link to='/Admin/Add-Geometry'>
+                            <h4>Add Geometry</h4>
+                    </Link>
                     <Link to='/Admin/Add-Art'>
                             <h4>Add Artwork</h4>
                     </Link>
-                    <h4>Artists</h4>
-                    <h4>Creation Dates</h4>
-                    <h4>Types</h4>
-                    <h4>Medium and Support</h4>
-                    <h4>Zones</h4>
+                    {/* <Link to='/Admin/Add-Location'>
+                            <h4>Add Location</h4>
+                    </Link> */}
+
                     <div id="divider"></div>
                     <div id="zone-bottom">
                         <p>Settings</p>

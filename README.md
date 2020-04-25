@@ -10,7 +10,7 @@
 ## Back End  
 
 - [x] Template Database - https://artmuseumdraft.herokuapp.com/
-- [ ] Official Database 
+- [x] Official Database - https://cs2345-db-api.herokuapp.com/ 
 
 ## Tech Stack 
 
