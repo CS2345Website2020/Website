@@ -3,22 +3,24 @@ import { Route } from 'react-router-dom';
 import PrivateRoute from './components/PrivateRoute';
 import './App.css';
 
-// components 
+// public components 
 import Home from './components/Home';
 import Database from './components/Database'; 
 import PHistory from './components/History'; 
 import About from './components/About'; 
 import Navigation from './components/Navigation';
 import ArtList from './components/ArtList';
+import Footer from './components/Footer';
+
+// admin components 
 import Login from './components/admin/Login';
 import SignUp from './components/admin/SignUp';
 import AdminHome from './components/admin/AdminHome';
 import AddArtForm from './components/admin/AddArtForm';
 import ArtistForm from './components/admin/ArtistForm';
 import CategoryForm from './components/admin/CategoryForm';
-import LocationForm from './components/admin/LocationForm';
-import Footer from './components/Footer'
 import GeometryForm from './components/admin/GeometryForm';
+import OwnerForm from './components/admin/OwnerForm';
 
 
 function App() {
@@ -37,8 +39,9 @@ function App() {
       <PrivateRoute path="/Admin/Add-Art" component={AddArtForm} />
       <PrivateRoute path="/Admin/Add-Artist" component={ArtistForm} />
       <PrivateRoute path="/Admin/Add-Category" component={CategoryForm} />
+      <PrivateRoute path="/Admin/Add-Owner" component={OwnerForm} />
       <PrivateRoute path="/Admin/Add-Geometry" component={GeometryForm} />
-      <PrivateRoute path="/Admin/Add-Location" component={LocationForm} />
+      {/* <PrivateRoute path="/Admin/Add-Location" component={LocationForm} /> */}
       </div>
       <Footer/>
     </div>

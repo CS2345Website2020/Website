@@ -25,6 +25,9 @@ function AdminHome() {
                     <Link to='/Admin/Add-Art'>
                             <h4>Add Artwork</h4>
                     </Link>
+                    {/* <Link to='/Admin/Add-Location'>
+                            <h4>Add Location</h4>
+                    </Link> */}
 
                     <div id="divider"></div>
                     <div id="zone-bottom">

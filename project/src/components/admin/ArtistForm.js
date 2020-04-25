@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Form, Field, withFormik } from 'formik';
 import * as Yup from 'yup';
-import axios from 'axios';
+import { axiosWithAuth } from './axiosWithAuth.js';
+import '../../styles/AdminForms.css';
 
 const AddArtist = (props, { status }) => {
     // used with formik and yup validation 
@@ -28,10 +29,11 @@ const AddArtist = (props, { status }) => {
         <div id="artist-container">
             <div id="artist-text">
                 <h1>New Artist Form</h1>
-                <p>Please fill in this form completely to create a new artist.</p>
+                <p>Please complete this form to create a new artist.</p>
+                <p>If a value is unknown, enter <strong>'Unknown'</strong> in the input field.</p>
             </div>
             <Form 
-                className="artist-form"
+                id="artist-form"
                 onSubmit={handleSubmit}
             >
                 {/* first name */}
@@ -40,7 +42,7 @@ const AddArtist = (props, { status }) => {
                     type="text" 
                     name="firstName" 
                     placeholder="First Name"
-                    className="text-field"
+                    className="input"
                     onChange={handleChange}
                     onBlur={handleBlur}
                     value={values.firstName}
@@ -53,7 +55,7 @@ const AddArtist = (props, { status }) => {
                     type="test" 
                     name="lastName" 
                     placeholder="Last Name" 
-                    className="text-field"
+                    className="input"
                     onChange={handleChange}
                     onBlur={handleBlur}
                     value={values.lastName}
@@ -66,14 +68,17 @@ const AddArtist = (props, { status }) => {
                     type="test" 
                     name="birthDate" 
                     placeholder="Birth Date" 
-                    className="text-field"
+                    className="input"
                     onChange={handleChange}
                     onBlur={handleBlur}
                     value={values.birthDate}
                 />
                 {touched.birthDate && errors.birthDate && <p className="error">{errors.birthDate}</p>}
 
-                <button type="submit" className="button">Submit</button>
+                <div className="form-buttons">
+                    <button type="submit" className="submit-button"><span>Submit</span></button>
+                    <button className="cancel-button" onClick={() => props.history.push('/Admin')}><span>Cancel</span></button>
+                </div>
             </Form>
         </div>
     );
@@ -108,11 +113,11 @@ const ArtistForm = withFormik({
     handleSubmit(values, { resetForm, props }) {
         console.log("artist form values, props", values, props)
       
-		axios
+		axiosWithAuth()
             .post('https://cs2345-db-api.herokuapp.com/artist', values)
             .then(response => {
                 // successful 
-                console.log("add art form api response object", response.data);
+                console.log("add artist form api response object", response.data);
             }) 
 
             .catch(error => {

@@ -45,7 +45,7 @@ const LoginForm = (props, { status }) => {
                     onBlur={handleBlur}
                     value={values.username}
                 />
-                {touched.username && errors.username && ( <p className="error">{errors.username}</p> )}
+                {touched.username && errors.username && ( <p className="login-error">{errors.username}</p> )}
 
 
                 {/* password */}
@@ -59,7 +59,7 @@ const LoginForm = (props, { status }) => {
                     onBlur={handleBlur}
                     value={values.password}
                 />
-                {touched.password && errors.password && <p className="error">{errors.password}</p>}
+                {touched.password && errors.password && <p className="login-error">{errors.password}</p>}
 
                 <button type="submit" className="button">Submit</button>
 
