@@ -32,11 +32,11 @@ const SignUpForm = (props, { status }) => {
                 <p>Please fill in this form to create an account.</p>
             </div>
             <Form 
-                className="form"
+                className="sl-form"
                 onSubmit={handleSubmit}
             >   
                 {/* first name */}
-                <h2 className="placeholder">First Name</h2>
+                <h2 className="sl-placeholder">First Name</h2>
                 <Field 
                     type="text" 
                     name="firstName" 
@@ -46,10 +46,10 @@ const SignUpForm = (props, { status }) => {
                     onBlur={handleBlur}
                     value={values.firstName}
                 />
-                {touched.firstName && errors.firstName && ( <p className="error">{errors.firstName}</p> )}
+                {touched.firstName && errors.firstName && ( <p className="sl-error">{errors.firstName}</p> )}
 
                 {/* last name */}
-                <h2 className="placeholder">Last Name</h2>
+                <h2 className="sl-placeholder">Last Name</h2>
                 <Field 
                     type="text" 
                     name="lastName" 
@@ -59,10 +59,10 @@ const SignUpForm = (props, { status }) => {
                     onBlur={handleBlur}
                     value={values.lastName}
                 />
-                {touched.lastName && errors.lastName && ( <p className="error">{errors.lastName}</p> )}
+                {touched.lastName && errors.lastName && ( <p className="sl-error">{errors.lastName}</p> )}
 
                 {/* username */}
-                <h2 className="placeholder">Username</h2>
+                <h2 className="sl-placeholder">Username</h2>
                 <Field 
                     type="text" 
                     name="username" 
@@ -72,11 +72,11 @@ const SignUpForm = (props, { status }) => {
                     onBlur={handleBlur}
                     value={values.username}
                 />
-                {touched.username && errors.username && ( <p className="error">{errors.username}</p> )}
+                {touched.username && errors.username && ( <p className="sl-error">{errors.username}</p> )}
 
 
                 {/* password */}
-                <h2 className="placeholder">Password</h2>
+                <h2 className="sl-placeholder">Password</h2>
                 <Field 
                     type="password" 
                     name="password" 
@@ -86,10 +86,10 @@ const SignUpForm = (props, { status }) => {
                     onBlur={handleBlur}
                     value={values.password}
                 />
-                {touched.password && errors.password && <p className="error">{errors.password}</p>}
+                {touched.password && errors.password && <p className="sl-error">{errors.password}</p>}
 
                 <p>By creating an account to our <a href="https://library.bowdoin.edu/">Terms and Privacy</a>.</p>
-                <button type="submit" className="button">Submit</button>
+                <button type="submit" className="sl-button">Submit</button>
             </Form>
         </div>
     );
@@ -112,10 +112,10 @@ const SignUp = withFormik({
     validationSchema: Yup.object().shape({
         firstName: Yup
         .string()
-        .required(),
+        .required("Please Enter Last Name"),
         lastName: Yup
         .string() 
-        .required(),
+        .required("Please Enter First Name"),
         username: Yup
         .string()
         .required("Please Enter A Valid Username"),
