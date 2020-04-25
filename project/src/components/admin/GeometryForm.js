@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Form, Field, withFormik } from 'formik';
 import * as Yup from 'yup';
-// import axios from 'axios';
+import { axiosWithAuth } from './axiosWithAuth.js';
 
 const AddGeometry = (props, { status }) => {
     // used with formik and yup validation 
@@ -28,10 +28,11 @@ const AddGeometry = (props, { status }) => {
         <div id="geometry-container">
             <div id="geometry-text">
                 <h1>Geometry Form</h1>
-                <p>Please fill in this form completely.</p>
+                <p>Please fill in all sections of the form completely.</p>
+                <p>If missing information, please enter <strong>'Not Available'</strong> in the input field.</p>
             </div>
             <Form 
-                className="geometry-form"
+                id="geometry-form"
                 onSubmit={handleSubmit}
             >
                 {/* shape */}
@@ -40,7 +41,7 @@ const AddGeometry = (props, { status }) => {
                     type="text" 
                     name="shape" 
                     placeholder="Enter Shape"
-                    className="text-field"
+                    className="input"
                     onChange={handleChange}
                     onBlur={handleBlur}
                     value={values.shape}
@@ -53,7 +54,7 @@ const AddGeometry = (props, { status }) => {
                     type="test" 
                     name="head" 
                     placeholder="Enter Head" 
-                    className="text-field"
+                    className="input"
                     onChange={handleChange}
                     onBlur={handleBlur}
                     value={values.head}
@@ -63,10 +64,10 @@ const AddGeometry = (props, { status }) => {
                 {/* width */}
                 <h2 className="placeholder">Width</h2>
                 <Field 
-                    type="test" 
+                    type="number" 
                     name="width" 
                     placeholder="Enter Width" 
-                    className="text-field"
+                    className="input"
                     onChange={handleChange}
                     onBlur={handleBlur}
                     value={values.width}
@@ -76,10 +77,10 @@ const AddGeometry = (props, { status }) => {
                 {/* length */}
                 <h2 className="placeholder">Length</h2>
                 <Field 
-                    type="test" 
+                    type="number" 
                     name="length" 
-                    placeholder="Enter Width" 
-                    className="text-field"
+                    placeholder="Enter Length" 
+                    className="input"
                     onChange={handleChange}
                     onBlur={handleBlur}
                     value={values.length}
@@ -89,10 +90,10 @@ const AddGeometry = (props, { status }) => {
                 {/* height */}
                 <h2 className="placeholder">Height</h2>
                 <Field 
-                    type="test" 
+                    type="number" 
                     name="height" 
                     placeholder="Enter Height" 
-                    className="text-field"
+                    className="input"
                     onChange={handleChange}
                     onBlur={handleBlur}
                     value={values.height}
@@ -102,17 +103,20 @@ const AddGeometry = (props, { status }) => {
                 {/* radius */}
                 <h2 className="placeholder">Radius</h2>
                 <Field 
-                    type="test" 
+                    type="number" 
                     name="radius" 
                     placeholder="Enter Radius" 
-                    className="text-field"
+                    className="input"
                     onChange={handleChange}
                     onBlur={handleBlur}
                     value={values.radius}
                 />
                 {touched.radius && errors.radius && <p className="error">{errors.radius}</p>}
 
-                <button type="submit" className="button">Submit</button>
+                <div className="form-buttons">
+                    <button type="submit" className="submit-button"><span>Submit</span></button>
+                    <button className="cancel-button" onClick={() => props.history.push('/Admin')}><span>Cancel</span></button>
+                </div>
             </Form>
         </div>
     );
@@ -137,29 +141,41 @@ const GeometryForm = withFormik({
     validationSchema: Yup.object().shape({
         shape: Yup
         .string()
-        .required(),
+        .required("Please Enter Geometry Shape"),
         head: Yup
         .string()
-        .required(),
+        .required("Please Enter Geometry Head"),
         width: Yup
         .number()
-        .required(),
+        .required("Please Enter Geometry Width"),
         length: Yup
         .number()
-        .required(),
+        .required("Please Enter Geometry Length"),
         height: Yup
         .number()
-        .required(),
+        .required("Please Enter Geometry Height"),
         radius: Yup
         .number()
-        .required()
+        .required("Please Enter Geometry Radius")
     }),
     
     // update values and set status 
     handleSubmit(values, { resetForm, props }) {
         console.log("geometry form values, props", values, props)
-    
-        resetForm(); 
+        
+        axiosWithAuth()
+            .post('https://cs2345-db-api.herokuapp.com/geometry', values)
+            .then(response => {
+                // successful 
+                console.log("geometry form api response object", response.data);
+            }) 
+
+            .catch(error => {
+                // unsuccessful 
+                console.log("The api is currently down.", error.response);
+            });
+
+        resetForm();
     }
 
 })(AddGeometry); // currying functions
