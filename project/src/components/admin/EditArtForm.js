@@ -13,21 +13,15 @@ const EditArtForm = ({ artId, closeModal }) => {
     // hook keeps track of art information  
 	const [art, setArt] = useState({}); 
 
-    // get the artwork by its id 
-	const fetchArt = id => {
-		console.log("hi")
-		axios
-			.get(`https://artmuseumdraft.herokuapp.com/art/${id}`)
-			.then(response => {setArt(response.data); console.log(art)})
-			.catch(error => console.log(error.response));
-	}
-
 	useEffect(function getArtData() {
 
-        // use fetchArt function to get art data 
-		fetchArt(artId);
+        // get art data by its id 
+		axios
+			.get(`https://artmuseumdraft.herokuapp.com/art/${artId}`)
+			.then(response => {setArt(response.data); console.log(art)})
+			.catch(error => console.log(error.response));
 		
-	}, [artId])
+	}, [artId, art])
 
 	// update hook info 
 	const handleChange = event => setArt({...art, [event.target.name]: event.target.value})
@@ -61,8 +55,8 @@ const EditArtForm = ({ artId, closeModal }) => {
 				<div onClick={closeModal} id="x"><FaTimes/></div>
 			</div>
 			<p>Please fill in all sections of the form completely.</p>
-			<p>You <strong>must</strong> have all IDs in order to add an artwork.</p>
-			<p>If the artwork is missing information, enter 'Not Available' or 'Unknown' in the input input.</p>
+			<p>You <strong>must</strong> have all IDs in order to edit an artwork.</p>
+			<p>If the artwork is missing information, enter 'Not Available' or 'Unknown' in the input.</p>
 			<form 
 				onSubmit={handleSubmit} 
 				id="edit-art-form"

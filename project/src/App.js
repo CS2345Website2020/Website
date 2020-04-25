@@ -14,7 +14,11 @@ import Login from './components/admin/Login';
 import SignUp from './components/admin/SignUp';
 import AdminHome from './components/admin/AdminHome';
 import AddArtForm from './components/admin/AddArtForm';
+import ArtistForm from './components/admin/ArtistForm';
+import CategoryForm from './components/admin/CategoryForm';
+import LocationForm from './components/admin/LocationForm';
 import Footer from './components/Footer'
+import GeometryForm from './components/admin/GeometryForm';
 
 
 function App() {
@@ -31,8 +35,10 @@ function App() {
       <Route path="/Admin/Register" component={SignUp}></Route>
       <PrivateRoute path="/Admin" exact component={AdminHome} />
       <PrivateRoute path="/Admin/Add-Art" component={AddArtForm} />
-      <PrivateRoute path="/Admin/Add-Category" component={AddArtForm} />
-      <PrivateRoute path="/Admin/Add-Location" component={AddArtForm} />
+      <PrivateRoute path="/Admin/Add-Artist" component={ArtistForm} />
+      <PrivateRoute path="/Admin/Add-Category" component={CategoryForm} />
+      <PrivateRoute path="/Admin/Add-Geometry" component={GeometryForm} />
+      <PrivateRoute path="/Admin/Add-Location" component={LocationForm} />
       </div>
       <Footer/>
     </div>

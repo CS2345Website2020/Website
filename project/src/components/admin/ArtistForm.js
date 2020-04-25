@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Form, Field, withFormik } from 'formik';
 import * as Yup from 'yup';
-// import axios from 'axios';
+import axios from 'axios';
 
-const ArtistForm = (props, { status }) => {
+const AddArtist = (props, { status }) => {
     // used with formik and yup validation 
     const {
         values,
@@ -80,10 +80,10 @@ const ArtistForm = (props, { status }) => {
 };
 
 // using formik 
-const AddArtist = withFormik({
+const ArtistForm = withFormik({
     
     // assign default value if given value is undefined 
-    mapPropsToValues({ firstName, lastName }) {
+    mapPropsToValues({ firstName, lastName, birthDate }) {
         return {
             firstName: firstName || "",
             lastName: lastName || "", 
@@ -123,6 +123,6 @@ const AddArtist = withFormik({
         resetForm(); 
     }
 
-})(ArtistForm); // currying functions
+})(AddArtist); // currying functions
 
-export default AddArtist;
+export default ArtistForm;
