@@ -27,21 +27,20 @@ function App() {
   return (
     <div className="App">
       <div className="page-content">
-      <Navigation/>
-      <Route path="/" exact component={Home}></Route>
-      <Route path="/Database" component={Database}></Route>
-      <Route path="/Project-History" component={PHistory}></Route>
-      <Route path="/About" component={About}></Route>
-      <Route path="/Art-Collection" component={ArtList}></Route>
-      <Route path="/Admin/Login" component={Login}></Route>
-      <Route path="/Admin/Register" component={SignUp}></Route>
-      <PrivateRoute path="/Admin" exact component={AdminHome} />
-      <PrivateRoute path="/Admin/Add-Art" component={AddArtForm} />
-      <PrivateRoute path="/Admin/Add-Artist" component={ArtistForm} />
-      <PrivateRoute path="/Admin/Add-Category" component={CategoryForm} />
-      <PrivateRoute path="/Admin/Add-Owner" component={OwnerForm} />
-      <PrivateRoute path="/Admin/Add-Geometry" component={GeometryForm} />
-      {/* <PrivateRoute path="/Admin/Add-Location" component={LocationForm} /> */}
+        <Navigation/>
+        <Route path="/" exact component={Home}></Route>
+        <Route path="/Database" component={Database}></Route>
+        <Route path="/Project-History" component={PHistory}></Route>
+        <Route path="/About" component={About}></Route>
+        <Route path="/Art-Collection" component={ArtList}></Route>
+        <Route path="/Admin/Login" component={Login}></Route>
+        <Route path="/Admin/Register" component={SignUp}></Route>
+        <PrivateRoute path="/Admin" exact component={AdminHome} />
+        <PrivateRoute path="/Admin/Add-Art" component={AddArtForm} />
+        <PrivateRoute path="/Admin/Add-Artist" component={ArtistForm} />
+        <PrivateRoute path="/Admin/Add-Category" component={CategoryForm} />
+        <PrivateRoute path="/Admin/Add-Owner" component={OwnerForm} />
+        <PrivateRoute path="/Admin/Add-Geometry" component={GeometryForm} />
       </div>
       <Footer/>
     </div>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import axios from 'axios';
+import { axiosWithAuth } from './axiosWithAuth.js';
 
 // icons
 import { FiEdit } from 'react-icons/fi';
@@ -35,8 +35,8 @@ function AdminArtCard({ art }) {
 
     const handleDelete = (event) => {
         event.preventDefault(); 
-		axios
-			.delete(`https://artmuseumdraft.herokuapp.com/art/${art.id}`)
+		axiosWithAuth()
+			.delete(`'https://cs2345-db-api.herokuapp.com/art_object/${art.id}`)
 			.then(response => {
 				console.log(response);
 			})
@@ -48,15 +48,31 @@ function AdminArtCard({ art }) {
 
     return (
         <tr>
-            {/* <td><img src={art.imgUrl} alt={`${art.title} by ${art.artist}`} className="admin-photo"/></td> */}
-            <td>{art.accession_number}</td>
+            {/* 
+                Image
+                Title 
+                description Thematic 
+                description Basic 
+                description Spatial 
+                Country of Origin
+                Accession Number
+                Image Url 
+                Artist Id                       
+                Category Id                 
+                Owner Id                      
+                Geometry Id  
+            */}
+            <td><img src={art.image_url} alt={`${art.title} by Artist ID: ${art.artistId}`} className="admin-photo"/></td>
             <td>{art.title}</td>
-            <td>{art.artist}</td>
-            <td>{art.type}</td> 
-            <td>{art.medium_support}</td>
-            <td>{art.credit_line}</td>
-            <td>{art.description}</td>
-            <td>{art.creation_date}</td>
+            <td>{art.description_basic}</td>
+            <td>{art.description_spatial}</td>
+            <td>{art.description_thematic}</td>
+            <td>{art.country_origin}</td>
+            <td>{art.accession_number}</td>
+            <td>{art.artistId}</td>
+            <td>{art.categoryId}</td> 
+            <td>{art.ownerId}</td>
+            <td>{art.geometryId}</td>
             <td><FiEdit onClick={openModal}/></td>
             <td><FaTrash onClick={confirmDelete}/></td>
 

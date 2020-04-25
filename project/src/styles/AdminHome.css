@@ -28,15 +28,19 @@
     font-size: medium;
 }
 
-#zone-container {
+#dash-container {
     /* border: 1px solid purple; */
-    width: 12%; 
+    width: 170px; 
     text-align: left;
     padding: 0 10px;
 }
 
-#zone-container .h4 {
+#dash-container .h4 {
     font-size: larger;
+}
+
+#dash {
+    margin-top: 0px;
 }
 
 #divider {
@@ -44,11 +48,19 @@
     border-top: 1px solid black;
 }
 
+#admin-list-container {
+    border: 1px solid red;
+    width: 100%; 
+    /* background-color: rgb(207, 215, 233); */
+    margin-bottom: 100px;
+}
+
 #admin-art-container {
-    /* border: 1px solid darkgreen; */
-    width: 85%; 
+    border: 1px solid darkgreen;
+    width: 100%; 
     /* background-color: rgb(207, 215, 233); */
     margin-bottom: 50px;
+    margin-right: 10px;
 }
 
 table, th, td {
@@ -74,31 +86,49 @@ tbody {
     background-color: rgb(235, 239, 247);
 }
 
+/* .row-Image {
+    width: 10%
+}
+
 .row-Anumb {
     width: 5%;
 }
+
 .row-Title {
     width: 15%;
 }
-.row-Artist {
-    width: 10%;
-}
-.row-Type {
+
+.row-ArtistID {
     width: 5%;
 }
-.row-Medium {
-    width: 6%;
-}
-.row-Credit {
-    width: 10%;
-}
-.row-Desc {
-    width: 40%;
-}
-.row-Date {
-    width: 6%;
-}
-.row-Edit {
-    width: 4%;
+
+.row-CategoryID {
+    width: 5%;
 }
 
+.row-OwnerID {
+    width: 5%;
+}
+
+.row-Country {
+    width: 5%;
+}
+
+.row-DescB {
+    width: 20%;
+}
+
+.row-DescS {
+    width: 20%;
+}
+
+.row-DescT {
+    width: 20%;
+}
+
+.row-Edit {
+    width: 2%;
+}
+.row-Delete {
+    width: 2%;
+} */

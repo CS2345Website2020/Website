@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Form, Field, withFormik } from 'formik';
 import * as Yup from 'yup';
-import axios from 'axios';
+import { axiosWithAuth } from './axiosWithAuth.js';
 
 // styles 
 import '../../styles/AdminForms.css'
@@ -36,19 +36,19 @@ const AddArt = (props, { status }) => {
 				id="art-form"
 			>
 				{/* title */}
- 				<h3 className="add-placeholder">Title</h3>
+ 				<h3 className="placeholder">Title</h3>
 				 <Field
 				 	type="text"
 					name="title"
 					placeholder="Enter Title"
 					value={values.title}
-					className="art-input"
+					className="input"
 					onChange={handleChange} 
 				/>
 				{touched.title && errors.title && ( <p className="error">{errors.title}</p> )}
 
 				{/* basic description */}
- 				<h3 className="add-placeholder">Basic Description</h3>
+ 				<h3 className="placeholder">Basic Description</h3>
  				<Field
 					type="text"
 					component="textarea"
@@ -61,7 +61,7 @@ const AddArt = (props, { status }) => {
 				{touched.description_basic && errors.description_basic && ( <p className="error">{errors.description_basic}</p> )}
 
 				{/* spatial description */}
- 				<h3 className="add-placeholder">Spatial Description</h3>
+ 				<h3 className="placeholder">Spatial Description</h3>
 				<Field 
 					type="text"
 					component="textarea"
@@ -74,7 +74,7 @@ const AddArt = (props, { status }) => {
 				{touched.description_spatial && errors.description_spatial && ( <p className="error">{errors.description_spatial}</p> )}
 				
 				{/* thematic description */}
- 				<h3 className="add-placeholder">Thematic Description</h3>
+ 				<h3 className="placeholder">Thematic Description</h3>
 				<Field 
 					type="text"
 					component="textarea"
@@ -87,88 +87,91 @@ const AddArt = (props, { status }) => {
 				{touched.description_thematic && errors.description_thematic && ( <p className="error">{errors.description_thematic}</p> )}
 
 				{/* country origin */}
- 				<h3 className="add-placeholder">Country of Origin</h3>
+ 				<h3 className="placeholder">Country of Origin</h3>
 				<Field 
 					type="text"
  					name="country_origin"
  					placeholder="Enter Country of Origin"
  					value={values.country_origin}
- 					className="art-input"
+ 					className="input"
  					onChange={handleChange}
 				/>
 				{touched.country_origin && errors.country_origin && ( <p className="error">{errors.country_origin}</p> )}
 
 				{/* artist id */}
- 				<h3 className="add-placeholder">Artist ID</h3>
+ 				<h3 className="placeholder">Artist ID</h3>
 				<Field 
 					type="number"
  					name="artistId"
  					placeholder="Enter Artist ID"
  					value={values.artistId}
- 					className="art-input"
+ 					className="input"
  					onChange={handleChange} 
 				/>
 				{touched.country_origin && errors.country_origin && ( <p className="error">{errors.country_origin}</p> )}
 
 				{/* category id */}
- 				<h3 className="add-placeholder">Category ID</h3>
+ 				<h3 className="placeholder">Category ID</h3>
 				<Field 
 					type="number"
  					name="categoryId"
  					placeholder="Enter Category ID"
  					value={values.categoryId}
- 					className="art-input"
+ 					className="input"
  					onChange={handleChange} 
 				/>
 				{touched.categoryId && errors.categoryId && ( <p className="error">{errors.categoryId}</p> )}
 				
 				{/* owner id */}
- 				<h3 className="add-placeholder">Owner ID</h3>
+ 				<h3 className="placeholder">Owner ID</h3>
 				<Field 
 					type="number"
  					name="ownerId"
  					placeholder="Enter Owner ID"
  					value={values.ownerId}
- 					className="art-input"
+ 					className="input"
  					onChange={handleChange} 
 				/>
 				{touched.ownerId && errors.ownerId && ( <p className="error">{errors.ownerId}</p> )}
 				
 				{/* geometry id */}
- 				<h3 className="add-placeholder">Geometry ID</h3>
+ 				<h3 className="placeholder">Geometry ID</h3>
 				<Field 
 					type="number"
 					name="geometryId"
 					placeholder="Enter Geometry ID"
 					value={values.geometryId}
-					className="art-input"
+					className="input"
 					onChange={handleChange} 
 				/>
 				{touched.geometryId && errors.geometryId && ( <p className="error">{errors.geometryId}</p> )}
 
 				{/* accession number */}
-				<h3 className="add-placeholder">Accession Number</h3>
+				<h3 className="placeholder">Accession Number</h3>
 				<Field type="text"
 						name="accession_number"
 						placeholder="Enter Accession Number"
 						value={values.accession_number}
-						className="art-input"
+						className="input"
 						onChange={handleChange} 
 				/>
 				{touched.accession_number && errors.accession_number && ( <p className="error">{errors.accession_number}</p> )}
 
 				{/* image */}
-				<h3 className="add-placeholder">Image Url</h3>
+				<h3 className="placeholder">Image Url</h3>
 				<Field type="text"
 						name="iamge_url"
 						placeholder="Enter Image Url"
 						value={values.image_url}
-						className="art-input"
+						className="input"
 						onChange={handleChange} 
 				/>
 				{touched.image_url && errors.image_url && ( <p className="error">{errors.image_url}</p> )}
 				
- 				<button type="submit" id="add-button"><span>Submit</span></button>
+				<div className="form-buttons">
+                    <button type="submit" className="submit-button"><span>Submit</span></button>
+                    <button className="cancel-button" onClick={() => props.history.push('/Admin')}><span>Cancel</span></button>
+                </div>
  			</Form>
 		</div>
 	);
@@ -233,21 +236,19 @@ const AddArtForm = withFormik({
 	}),
 
 	handleSubmit(values, { resetForm, props }) {
-		// console.log("add art values, props", values, props)
+		console.log("add art values, props", values, props)
 
-		axios
-		.post('https://cs2345-db-api.herokuapp.com/art_object', values)
-		.then(response => {
-			// successful 
-			console.log("add art form api response object", response.data);
-			
-			props.history.push('/Admin')
-		}) 
+		axiosWithAuth()
+			.post('https://cs2345-db-api.herokuapp.com/art_object', values)
+			.then(response => {
+				// successful 
+				console.log("add art form api response object", response.data);
+			}) 
 
-		.catch(error => {
-			// unsuccessful 
-			console.log("The api is currently down.", error.response);
-		});
+			.catch(error => {
+				// unsuccessful 
+				console.log("The api is currently down.", error.response);
+			});
 
 		resetForm(); 
 	}

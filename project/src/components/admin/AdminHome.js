@@ -8,8 +8,8 @@ function AdminHome() {
         <div>
             <h1 id="welcome-admin">Welcome, Admin!</h1>
             <div id="admin-home-container">
-                <div id="zone-container">
-                    <h4>Dashboard</h4>
+                <div id="dash-container">
+                    <h4 id="dash">Dashboard</h4>
                     <Link to='/Admin/Add-Artist'>
                             <h4>Add Artist</h4>
                     </Link>
