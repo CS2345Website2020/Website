@@ -25,6 +25,7 @@ import RyanDonlan from '../images/meet-the-team/ryan-donlan.jpeg'
 import TashaChrist from '../images/meet-the-team/tasha-christ.jpeg'
 import AdelaideEvans from '../images/meet-the-team/adelaide-evans.jpeg'
 import BradIngersoll from '../images/meet-the-team/brad-ingersoll.jpeg'
+import IsaacKabuika from '../images/meet-the-team/isaac-kabuika.jpeg'
 
 
 //git images
@@ -84,14 +85,24 @@ function About() {
         <h2 className="team-title"> Database Design </h2>
         <div className="flex-container">
             <div className="column">
+                <img className="avatar" src={ConnorFitzgerald} alt="Student Connor Fitzgerald"/>
+                <h2><a href="https://linkedin.com/in/cfitzgerald11" className="link">Connor Fitzgerald '21</a></h2>
+                <p> Environmental studies major with an interest in data engineering and sustainable computing. </p>
+            </div>
+            <div className="column">
                 <img className="avatar" src={AhmedHameed} alt="Student Ahmed Hameed"/>
                 <h2><a href="https://www.linkedin.com/in/ahmed-hameed-521145166/" className="link">Ahmed Hameed '22</a></h2>
                 <p> Computer Science Major at Bowdoin College with an interest in Software Development. </p>
             </div>
             <div class="column">
-                <img className="avatar" src={git2} alt="Student Isaac Kabuika"/>
-                <h2><a href="/#" className="link">Isaac Kabuika '20</a></h2>
-                <p> Bio </p>
+                <img className="avatar" src={IsaacKabuika} alt="Student Isaac Kabuika"/>
+                <h2><a href="https://www.linkedin.com/in/isaac-kabuika" className="link">Isaac Kabuika '20</a></h2>
+                <p> Computer Science major with experience in Web Engineering, Algorithm Optimization, and Artificial Intelligence. </p>
+            </div>
+            <div class="column">
+                <img className="avatar" src={RyanDonlan} alt="Student Ryan Donlan"/>
+                <h2><a href="https://www.linkedin.com/in/ryan-donlan-4912a1179/" className="link">Ryan Donlan '21 </a></h2>
+                <p> Computer Science major with interests in software engineering, cyber security, and big data </p>
             </div>
         </div>
 
