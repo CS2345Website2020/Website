@@ -86,12 +86,12 @@ function AdminArtList() {
                         <th className="row-5 row-DescT" key="row-DescT">Thematic</th>
                         <th className="row-6 row-Country" key="row-Country">Origin</th>
                         <th className="row-7 row-Anumb" key="row-Anumb">Accession Number</th>
-                        <th className="row-8 row-ArtistID" key="row-ArtistID">Artist ID</th>
+                        {/* <th className="row-8 row-ArtistID" key="row-ArtistID">Artist ID</th>
                         <th className="row-9 row-CategoryID" key="row-CategoryID">Category ID</th>
                         <th className="row-10 row-OwnerID" key="row-OwnerID">Owner ID</th>
-                        <th className="row-11 row-ArtistID" key="row-ArtistID">Geometry ID</th>
-                        <th className="row-12 row-Edit" key="row-Edit"></th>
-                        <th className="row-13 row-Delete" key="row-Delete"></th>
+                        <th className="row-11 row-ArtistID" key="row-ArtistID">Geometry ID</th> */}
+                        {/* <th className="row-12 row-Edit" key="row-Edit"></th>
+                        <th className="row-13 row-Delete" key="row-Delete"></th> */}
                     </tr>
                 </thead>
                 <tbody>

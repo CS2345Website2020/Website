@@ -49,7 +49,7 @@
 }
 
 #admin-list-container {
-    /* border: 1px solid black; */
+    border: 1px solid black;
     width: 100%; 
     /* background-color: rgb(207, 215, 233); */
     margin-bottom: 100px;
@@ -65,7 +65,8 @@
 }
 
 table, th, td {
-    border-collapse: collapse;
+    /* border-collapse: collapse; */
+    table-layout: fixed;
 }
 
 th, td {

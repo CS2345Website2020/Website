@@ -69,10 +69,10 @@ function AdminArtCard({ art }) {
             <td>{art.description_thematic}</td>
             <td>{art.country_origin}</td>
             <td>{art.accession_number}</td>
-            <td>{art.artistId}</td>
+            {/* <td>{art.artistId}</td>
             <td>{art.categoryId}</td> 
             <td>{art.ownerId}</td>
-            <td>{art.geometryId}</td>
+            <td>{art.geometryId}</td> */}
             <td><FiEdit onClick={openModal}/></td>
             <td><FaTrash onClick={confirmDelete}/></td>
 
