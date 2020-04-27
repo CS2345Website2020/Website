@@ -29,10 +29,10 @@ import IsaacKabuika from '../images/meet-the-team/isaac-kabuika.jpeg'
 
 
 //git images
-import git2 from '../images/meet-the-team/36675751.png'
+//import git2 from '../images/meet-the-team/36675751.png'
 import git3 from '../images/meet-the-team/36677169.png'
 import git4 from '../images/meet-the-team/34076044.png'
-import git5 from '../images/meet-the-team/10201229.png'
+//import git5 from '../images/meet-the-team/10201229.png'
 
 
 function About() {
