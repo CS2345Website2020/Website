@@ -53,7 +53,7 @@ function Navigation() {
                         <h2 className="menuTitle">About</h2>
                     </Link>
                 </div>
-            </div> : <div id="link-container">
+            </div> : <div id="admin-link-container">
                 <div className="link-box">
                     <Link to='/Admin' className="navLink">
                         <div className="borderRight">
@@ -62,11 +62,11 @@ function Navigation() {
                     </Link>
                 </div>
                 <div className="link-box">
-                    <Link to='/' onClick={() => {localStorage.removeItem("token"); setLogin(false); return "hello"}}className="navLink">
+                    <a href='/' onClick={() => {localStorage.removeItem("token"); setLogin(false); return "hello"}}className="navLink">
                         <div className="borderRight">
                             <h2 className="menuTitle">Logout</h2>
                         </div>
-                    </Link>
+                    </a>
                 </div>
             </div>}
         </div>

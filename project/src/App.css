@@ -46,15 +46,27 @@
   height: 60px;
 }
 
+.footer-content {
+  display: flex;
+  margin-left: 2%;
+
+}
+
 .footer-link {
   text-decoration: none;
+  width: 6.5%;
 }
 
 .footer-text {
+  text-align: center;
   margin-top: 16px;
   margin-left: 3%;
   color: white;
   font-size: 18px;
+}
+
+.footer-text:hover {
+  color: rgb(171, 171, 171);
 }
 
 html {
@@ -65,3 +77,5 @@ html {
   text-align: center;
   padding-bottom: 80px;
 }
+
+
