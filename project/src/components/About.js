@@ -78,8 +78,7 @@ function About() {
                 <img className="avatar" src={EmmeMcCabe} alt="Student Emme McCabe"/>
                 <h2><a href="https://www.linkedin.com/in/emme-mccabe" className="link">Emme McCabe '20</a></h2>
                 <p> Computer Science Major exploring the convergence of computing ethics and quantitative trading. </p>
-            </div>
-                
+            </div>   
         </div>
 
         <h2 className="team-title"> Database Design </h2>
