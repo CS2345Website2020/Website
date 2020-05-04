@@ -49,14 +49,14 @@
 }
 
 #admin-list-container {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     width: 100%; 
     /* background-color: rgb(207, 215, 233); */
     margin-bottom: 100px;
 }
 
 #admin-art-container {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     width: 100%; 
     min-height: 100vh;
     /* background-color: rgb(207, 215, 233); */
@@ -65,8 +65,8 @@
 }
 
 table, th, td {
-    /* border-collapse: collapse; */
-    table-layout: fixed;
+    border-collapse: collapse;
+    /* table-layout: fixed; */
 }
 
 th, td {
@@ -79,7 +79,7 @@ td {
 }
 
 thead {
-    text-align: center;
+    text-align: left;
     background-color: rgb(217, 223, 236);
 }
 
