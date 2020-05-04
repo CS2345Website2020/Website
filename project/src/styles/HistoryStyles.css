@@ -1,0 +1,29 @@
+  wrapper {
+    width: 200px;
+    size: 200%;
+    background-color: whitesmoke;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 200%;
+    flex: 1;
+  }
+
+  .picture1 {   
+    position: auto;
+    height: 200px;
+}
+
+.picture {   
+  height: 500px;
+  position: top;
+  margin: 0px 0px 1000px 1000px
+}
