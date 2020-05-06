@@ -7,6 +7,10 @@
     position: relative;
 }
 
+.bottom-paddding-home {
+    padding-bottom: 54px;
+}
+
 .home-text {
     color: white;
     width: 70%;
@@ -20,10 +24,6 @@
     position: absolute;
     background-color: rgba(0,0,0,0.6);
     width: 100%;
-}
-
-.virtual-tour {
-    height: 500px;
 }
 
 .welcome {

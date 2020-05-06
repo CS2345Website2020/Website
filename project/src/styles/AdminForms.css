@@ -136,7 +136,7 @@
  
 #add-art-container {
     height: 100%;
-    margin-bottom: 90px; 
+    padding-bottom: 100px;
 }
 
 #art-form {
@@ -278,8 +278,7 @@
 /* Artist Form */
 
 #artist-container {
-    height: 100vh;
-    margin-bottom: 90px; 
+    height: 90vh;
 }
 
 #artist-form {
