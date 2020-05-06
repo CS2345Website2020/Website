@@ -2,6 +2,7 @@ import React from 'react';
 import '../../styles/AdminHome.css'
 import AdminArtList from './AdminArtList';
 import DropDownList from 'react-widgets/lib/DropdownList';
+import { FaCog, FaWrench, FaRegQuestionCircle } from 'react-icons/fa'
 
 function AdminHome(props) {
 
@@ -36,9 +37,9 @@ function AdminHome(props) {
 
                     <div id="divider"></div>
                     <div id="zone-bottom">
-                        <p>Settings</p>
-                        <p>Preferences</p> 
-                        <p>Help</p>
+                        <p><FaWrench size={15} style={{marginRight: '4px'}}/> Settings</p>
+                        <p><FaCog size={15} style={{marginRight: '4px'}}/> Preferences</p> 
+                        <p><FaRegQuestionCircle size={15} style={{marginRight: '6px'}}/>Help</p>
                     </div>
                 </div>
                 <div id="admin-art-container">
