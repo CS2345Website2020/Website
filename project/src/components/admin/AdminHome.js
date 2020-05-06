@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; 
 import '../../styles/AdminHome.css'
 import AdminArtList from './AdminArtList';
 import DropDownList from 'react-widgets/lib/DropdownList';
@@ -12,7 +11,6 @@ function AdminHome(props) {
             <div id="admin-home-container">
                 <div id="dash-container">
                     <h4 id="dash">Dashboard</h4>
-                    {/* <h4>Forms</h4> */}
                     <DropDownList 
                         data={[
                             'Add Artist', 'Add Category', 'Add Owner', 'Add Geometry', 'Add Art'
