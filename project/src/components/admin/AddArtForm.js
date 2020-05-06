@@ -99,7 +99,7 @@ const AddArt = (props, { status }) => {
 				{touched.country_origin && errors.country_origin && ( <p className="error">{errors.country_origin}</p> )}
 
 				{/* artist id */}
- 				<h3 className="placeholder">Artist ID</h3>
+ 				<h3 className="placeholder">Artist</h3>
 				<Field 
 					type="number"
  					name="artistId"
@@ -111,7 +111,7 @@ const AddArt = (props, { status }) => {
 				{touched.country_origin && errors.country_origin && ( <p className="error">{errors.country_origin}</p> )}
 
 				{/* category id */}
- 				<h3 className="placeholder">Category ID</h3>
+ 				<h3 className="placeholder">Category</h3>
 				<Field 
 					type="number"
  					name="categoryId"
@@ -123,7 +123,7 @@ const AddArt = (props, { status }) => {
 				{touched.categoryId && errors.categoryId && ( <p className="error">{errors.categoryId}</p> )}
 				
 				{/* owner id */}
- 				<h3 className="placeholder">Owner ID</h3>
+ 				<h3 className="placeholder">Owner</h3>
 				<Field 
 					type="number"
  					name="ownerId"
@@ -135,7 +135,7 @@ const AddArt = (props, { status }) => {
 				{touched.ownerId && errors.ownerId && ( <p className="error">{errors.ownerId}</p> )}
 				
 				{/* geometry id */}
- 				<h3 className="placeholder">Geometry ID</h3>
+ 				<h3 className="placeholder">Geometry</h3>
 				<Field 
 					type="number"
 					name="geometryId"
@@ -219,16 +219,16 @@ const AddArtForm = withFormik({
 		.required("Please Enter Accession Number or Not Available"),
 		artistId: Yup
 		.number()
-		.required("Artist ID is Required to Create New Artwork"),
+		.required("Artist is Required to Create New Artwork"),
 		categoryId: Yup
 		.number()
-		.required("Category ID is Required to Create New Artwork"),
+		.required("Category is Required to Create New Artwork"),
 		ownerId: Yup 
 		.number()
-		.required("Owner ID is Required to Create New Artwork"), 
+		.required("Owner is Required to Create New Artwork"), 
 		geometryId: Yup
 		.number()
-		.required("Geometry ID is Required to Create New Artwork"),
+		.required("Geometry is Required to Create New Artwork"),
 		image_url: Yup 
 		.string()
 		.url()

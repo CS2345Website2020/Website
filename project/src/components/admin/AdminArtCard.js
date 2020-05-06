@@ -5,6 +5,9 @@ import { axiosWithAuth } from './axiosWithAuth.js';
 import { FiEdit } from 'react-icons/fi';
 import { FaTrash } from 'react-icons/fa';
 
+// images 
+import imageMissing from '../../images/image-missing.png'
+
 // modal
 import Modal from 'react-modal';
 import EditArtForm from './EditArtForm';
@@ -48,31 +51,10 @@ function AdminArtCard({ art }) {
 
     return (
         <tr>
-            {/* 
-                Image
-                Title 
-                description Thematic 
-                description Basic 
-                description Spatial 
-                Country of Origin
-                Accession Number
-                Image Url 
-                Artist Id                       
-                Category Id                 
-                Owner Id                      
-                Geometry Id  
-            */}
-            <td><img src={art.image_url} alt={`${art.title} by Artist ID: ${art.artistId}`} className="admin-photo"/></td>
+            <td>{art.image_url ? <img src={art.image_url} alt={`${art.title} by Artist ID: ${art.artistId}`} className="admin-photo"/> : <img src={imageMissing} alt="No link in database for this art piece." />}</td>
             <td>{art.title}</td>
-            <td>{art.description_basic}</td>
-            <td>{art.description_spatial}</td>
-            <td>{art.description_thematic}</td>
             <td>{art.country_origin}</td>
             <td>{art.accession_number}</td>
-            <td>{art.artistId}</td>
-            <td>{art.categoryId}</td> 
-            <td>{art.ownerId}</td>
-            <td>{art.geometryId}</td>
             <td><FiEdit onClick={openModal}/></td>
             <td><FaTrash onClick={confirmDelete}/></td>
 

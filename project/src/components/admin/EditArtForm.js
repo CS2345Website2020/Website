@@ -8,8 +8,7 @@ import '../../styles/AdminForms.css'
 import { FaTimes } from 'react-icons/fa'
 
 const EditArtForm = ({ artId, closeModal }) => {
-	console.log("art ID", artId)
-    
+
     // hook keeps track of art information  
 	const [art, setArt] = useState({}); 
 
@@ -17,8 +16,8 @@ const EditArtForm = ({ artId, closeModal }) => {
 
         // get art data by its id 
 		axios
-			.get(`https://artmuseumdraft.herokuapp.com/art/${artId}`)
-			.then(response => {setArt(response.data); console.log(art)})
+			.get(`https://cs2345-db-api.herokuapp.com/art_object/${artId}`)
+			.then(response => {setArt(response.data.art_object)})
 			.catch(error => console.log(error.response));
 		
 	}, [artId, art])
