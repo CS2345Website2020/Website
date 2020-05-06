@@ -10,7 +10,8 @@
     flex-direction: row;
     justify-content: space-between;
     height: 60px;
-    background-color: rgb(250, 195, 93);
+    background-color:#343a40;
+    color: aliceblue;
 }
 
 #welcome-admin {
@@ -66,11 +67,12 @@
 
 #dash-container {
     /* border: 1px solid purple; */
-    width: 180px; 
+    width: 200px; 
     text-align: left;
+    color: white;
     padding: 30px 10px 0 10px;
     margin-right: 10px;
-    background-color: rgb(241, 178, 95);
+    background-color: #212529;
 }
 
 #dash {
