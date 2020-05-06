@@ -6,9 +6,22 @@ import { FaCog, FaWrench, FaRegQuestionCircle } from 'react-icons/fa'
 
 function AdminHome(props) {
 
+    let newDate = new Date()
+    let date = newDate.getDate();
+    let month = newDate.getMonth() + 1;
+    let year = newDate.getFullYear();
+    let hours = newDate.getHours(); //To get the Current Hours
+    let min = newDate.getMinutes(); //To get the Current Minutes 
+
     return (
         <div>
-            <h1 id="welcome-admin">Welcome, Admin!</h1>
+            <div id="welcome-container">
+                <h1 id="welcome-admin">Welcome, Admin!</h1>
+                <div id="date-and-time">
+                    <p id="date-today">{`${month<10?`0${month}`:`${month}`} / ${date} / ${year} `}</p>
+                    <p id="time-today">{`${hours} : ${min}`}</p>
+                </div>
+            </div>
             <div id="admin-home-container">
                 <div id="dash-container">
                     <h4 id="dash">Dashboard</h4>
