@@ -11,7 +11,7 @@ function AdminHome(props) {
     const month = newDate.getMonth() + 1;
     const year = newDate.getFullYear();
 
-    const [dt, setDt] = useState(new Date().toLocaleString());
+    const [dt, setDt] = useState(new Date().toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true }));
 
     useEffect(() => {
         let secTimer = setInterval( () => {
