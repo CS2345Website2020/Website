@@ -88,7 +88,7 @@ const SignUpForm = (props, { status }) => {
                 />
                 {touched.password && errors.password && <p className="sl-error">{errors.password}</p>}
 
-                <p>By creating an account to our <a href="https://library.bowdoin.edu/">Terms and Privacy</a>.</p>
+                <p>By creating an account you are agreeing to our <a href="https://library.bowdoin.edu/">Terms and Privacy</a>.</p>
                 <button type="submit" className="sl-button">Submit</button>
             </Form>
         </div>
