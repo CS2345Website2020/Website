@@ -26,6 +26,7 @@ const SignUpForm = (props, { status }) => {
     }, [status, admin]); 
 
     return(
+        <div id="bottom-padding">
         <div id="sign-container">
             <div id="sign-text">
                 <h1>Sign Up</h1>
@@ -91,6 +92,7 @@ const SignUpForm = (props, { status }) => {
                 <p>By creating an account you are agreeing to our <a href="https://library.bowdoin.edu/">Terms and Privacy</a>.</p>
                 <button type="submit" className="sl-button">Submit</button>
             </Form>
+        </div>
         </div>
     );
 };

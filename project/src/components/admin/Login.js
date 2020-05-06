@@ -28,6 +28,7 @@ const LoginForm = (props, { status }) => {
     }, [status, login]); 
 
     return(
+        <div id="bottom-padding">
         <div id="login-container">
             <h1>Sign In</h1>
 
@@ -67,6 +68,7 @@ const LoginForm = (props, { status }) => {
 
                 <Link to="/Admin/Register" id="create"><p>Create an account</p></Link>
             </Form>
+        </div>
         </div>
     );
 };
