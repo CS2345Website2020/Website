@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import '../../styles/AdminHome.css'
 import AdminArtList from './AdminArtList';
 import DropDownList from 'react-widgets/lib/DropdownList';
@@ -6,20 +6,28 @@ import { FaCog, FaWrench, FaRegQuestionCircle } from 'react-icons/fa'
 
 function AdminHome(props) {
 
-    let newDate = new Date()
-    let date = newDate.getDate();
-    let month = newDate.getMonth() + 1;
-    let year = newDate.getFullYear();
-    let hours = newDate.getHours(); //To get the Current Hours
-    let min = newDate.getMinutes(); //To get the Current Minutes 
+    const newDate = new Date()
+    const date = newDate.getDate();
+    const month = newDate.getMonth() + 1;
+    const year = newDate.getFullYear();
+
+    const [dt, setDt] = useState(new Date().toLocaleString());
+
+    useEffect(() => {
+        let secTimer = setInterval( () => {
+            setDt(new Date().toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true }))
+        },1000)
+
+        return () => clearInterval(secTimer);
+    }, []);
 
     return (
         <div>
             <div id="welcome-container">
                 <h1 id="welcome-admin">Welcome, Admin!</h1>
                 <div id="date-and-time">
-                    <p id="date-today">{`${month<10?`0${month}`:`${month}`} / ${date} / ${year} `}</p>
-                    <p id="time-today">{`${hours} : ${min}`}</p>
+                    <p id="date-today">{`${month<10?`0${month}`:`${month}`} / ${date} / ${year}`}</p>
+                    <p id="time-today">{`${dt}`}</p>
                 </div>
             </div>
             <div id="admin-home-container">
