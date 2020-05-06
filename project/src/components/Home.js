@@ -16,7 +16,7 @@ function Home() {
         </h2>
         </div>
         </div>
-        <iframe width="110%" height="600px" src="https://poly.google.com/view/0zQApkm4Gol/embed?chrome=min" frameborder="0" allowvr="yes" allow="vr; xr; accelerometer; magnetometer; gyroscope; autoplay;" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel="" ></iframe>
+        <iframe width="110%" height="900px" src="https://poly.google.com/view/6FGorlIYknW/embed?chrome=min" frameborder="0" allowvr="yes" allow="vr; xr; accelerometer; magnetometer; gyroscope; autoplay;" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel="" ></iframe>
         </div>
     );
 }
