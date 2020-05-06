@@ -61,7 +61,7 @@
     min-height: 100vh;
     /* background-color: rgb(207, 215, 233); */
     margin-bottom: 50px;
-    margin-right: 10px;
+    margin-right: 15px;
 }
 
 table, th, td {
@@ -88,49 +88,31 @@ tbody {
     background-color: rgb(235, 239, 247);
 }
 
-/* .row-Image {
+.row-Image {
+    /* border: 1px solid red; */
     width: 10%
 }
 
 .row-Anumb {
-    width: 5%;
-}
-
-.row-Title {
+    /* border: 1px solid red; */
     width: 15%;
 }
 
-.row-ArtistID {
-    width: 5%;
-}
-
-.row-CategoryID {
-    width: 5%;
-}
-
-.row-OwnerID {
-    width: 5%;
+.row-Title {
+    /* border: 1px solid blue; */
+    width: 40%;
 }
 
 .row-Country {
-    width: 5%;
-}
-
-.row-DescB {
-    width: 20%;
-}
-
-.row-DescS {
-    width: 20%;
-}
-
-.row-DescT {
+    /* border: 1px solid green; */
     width: 20%;
 }
 
 .row-Edit {
-    width: 2%;
+    /* border: 1px solid aqua; */
+    width: 5%;
 }
 .row-Delete {
-    width: 2%;
-} */
+    /* border: 1px solid saddlebrown; */
+    width: 5%;
+}

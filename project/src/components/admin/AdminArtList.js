@@ -14,26 +14,22 @@ function AdminArtList() {
     const [search, setSearch] = useState("")
 
     // loop through art object 
-    const loopObj = (artObj) => {
-        for (let [key, value] of Object.entries(artObj)) {
-            
-            console.log(`key ${key}, value ${value}, typeof value ${typeof value}`);
-
-            if (key in ["createdAt", "updatedAt", "id", "geometry"] || value === null ) {
-                continue
-            } else if (typeof value === "string" && value.toLowerCase().includes(search)) {
-                return <AdminArtCard art={artObj} key={artObj.accession_number}/>
-            }
-        }
-    }
+    // const loopObj = (artObj) => {
+    //     for (let [key, value] of Object.entries(artObj)) {
+    //         if (typeof value === "string" && value.toLowerCase().match(search)) {
+    //             console.log(`key ${key}, value ${value}, typeof value ${typeof value}`);
+    //             return <AdminArtCard art={artObj} key={artObj.accession_number}/>
+    //         }
+    //     }
+    // }
     
     useEffect(() => {
         const getArtData = () => {
             axios
                 .get('https://cs2345-db-api.herokuapp.com/art_object/all')
                 .then(response => {
-                    // successful 
-                    console.log("Art data response", response.data)
+                    // // successful 
+                    // console.log("Art data response", response.data)
 
                     // save art data to state 
                     setArt(response.data.art_objects)
@@ -50,6 +46,10 @@ function AdminArtList() {
 
     const handleSearch = (event) => {
         setSearch(event.target.value);
+    }
+
+    if (!art) {
+        return (<h1>Loading...</h1>)
     }
 
     return (
@@ -76,8 +76,11 @@ function AdminArtList() {
                     </tr>
                 </thead>
                 <tbody>
-                {search && art.length > 0 ? art.map(artwork => {
-                    return loopObj(artwork)
+                {search && art.length > 0 ? art.map((artwork) => {
+                    if (artwork.title.toLowerCase().includes(search) || artwork.country_origin.toLowerCase().includes(search) || artwork.accession_number.includes(search)) {
+                        return <AdminArtCard art={artwork} key={art.accession_number}/>
+                    } 
+                    return null 
                 }) : art.map(artwork => {    
                     
                     // create an art card for each artwork 

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { withRouter } from 'react-router';
 import { Form, Field, withFormik } from 'formik';
 import * as Yup from 'yup';
 import axios from 'axios';
@@ -116,4 +117,4 @@ const Login = withFormik({
 
 })(LoginForm); // currying functions
 
-export default Login;  
+export default withRouter(Login);  
