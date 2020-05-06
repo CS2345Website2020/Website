@@ -2,15 +2,25 @@ import React from 'react';
 import { Link } from 'react-router-dom'; 
 import '../../styles/AdminHome.css'
 import AdminArtList from './AdminArtList';
+import DropDownList from 'react-widgets/lib/DropdownList';
 
-function AdminHome() {
+function AdminHome(props) {
+
     return (
         <div>
             <h1 id="welcome-admin">Welcome, Admin!</h1>
             <div id="admin-home-container">
                 <div id="dash-container">
                     <h4 id="dash">Dashboard</h4>
-                    <Link to='/Admin/Add-Artist'>
+                    {/* <h4>Forms</h4> */}
+                    <DropDownList 
+                        data={[
+                            'Add Artist', 'Add Category', 'Add Owner', 'Add Geometry', 'Add Art'
+                        ]}
+                        defaultValue={"Forms"}
+                        onChange={event => {props.history.push(`/Admin/${event.split(' ').join('-')}`)}}
+                    />
+                    {/* <Link to='/Admin/Add-Artist'>
                             <h4>Add Artist</h4>
                     </Link>
                     <Link to='/Admin/Add-Category'>
@@ -24,9 +34,6 @@ function AdminHome() {
                     </Link>
                     <Link to='/Admin/Add-Art'>
                             <h4>Add Artwork</h4>
-                    </Link>
-                    {/* <Link to='/Admin/Add-Location'>
-                            <h4>Add Location</h4>
                     </Link> */}
 
                     <div id="divider"></div>
