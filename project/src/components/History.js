@@ -89,9 +89,28 @@ function PHistory() {
                             </p>
 
                             <h4> Website Team </h4>
-                            <p>
+                            <ul>                     
+                            <li>Provided information and updates about project team members and their skills</li> 
+                            <li>Online gallery of art displayed from database</li>
+                            <li>Administrative access to database </li>
+                            </ul>
 
-                            </p>
+                            <h5> Mobile App Team </h5>
+                            <ul>                     
+                            <li>ADA compliance</li> 
+                            <li>Implemented audible aspects of app</li>
+                            <li>Created pages with leveled descriptions of art</li>
+                            </ul>
+                            <h5> UX/UI </h5>
+                            <ul>                     
+                            <li>Completed Coyote Verbal Description Training</li> 
+                            <li>Completed basic, spatial, and thematic painting descriptions for 5 paintings, which completed a corner of the gallery.</li>
+                            <li>Received feed back from blind/low vision participants about such descriptions via email and phone interviews. </li>
+                            <li>Entered all gallery data into the database via Swagger.</li>
+                            <li>Subjects for user testing of the database.</li>
+                            </ul>
+
+
                         </TimelineItem>
 
 
