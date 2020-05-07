@@ -54,15 +54,18 @@ function AdminArtList() {
 
     return (
         <div>
-            <div id="search-bar">
-                <FaSearch id="search-icon" />
-                <input
-                    type="text"
-                    name="search"
-                    className="search-input"
-                    onChange={handleSearch}
-                    placeholder="Search.."
-                />
+            <div id="title-search">
+                <h3>Artworks on Display</h3>
+                <div id="search-bar">
+                    <FaSearch id="search-icon" />
+                    <input
+                        type="text"
+                        name="search"
+                        className="search-input"
+                        onChange={handleSearch}
+                        placeholder="Search.."
+                    />
+                </div>
             </div>
             <table id="admin-list-container">
                 <thead>

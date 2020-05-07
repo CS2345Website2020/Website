@@ -38,8 +38,13 @@
   }
 }
 
+.bottom-padding {
+  padding-bottom: 80px;
+}
+
 .footer {
   position: absolute;
+  margin-top: 0;
   bottom: 0;
   background-color: black;
   width: 100%;
@@ -54,7 +59,7 @@
 
 .footer-link {
   text-decoration: none;
-  width: 6.5%;
+  width: 15vh;
 }
 
 .footer-text {
@@ -75,7 +80,6 @@ html {
 
 .page-content {
   text-align: center;
-  padding-bottom: 80px;
 }
 
 

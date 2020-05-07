@@ -37,7 +37,7 @@ import git4 from '../images/meet-the-team/34076044.png'
 
 function About() {
     return (
-        <div>
+        <div className="bottom-padding">
 
         <h1 className="text-uppercase"> Meet the Insite Project Team! </h1>
 

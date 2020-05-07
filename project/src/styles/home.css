@@ -1,15 +1,19 @@
 .banner {
-    background-image: url("../images/HomePic1.jpeg");
-    background-size: 2700px;
+    background-image: url("../images/HomePicv2.jpg");
+    background-size: 2200px;
     background-position-x: center;
     background-position-y: 15%;
     height: 97vh;
     position: relative;
 }
 
+.bottom-paddding-home {
+    padding-bottom: 54px;
+}
+
 .home-text {
     color: white;
-    width: 70%;
+    width: 80vh;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 70px;
@@ -20,10 +24,6 @@
     position: absolute;
     background-color: rgba(0,0,0,0.6);
     width: 100%;
-}
-
-.virtual-tour {
-    height: 500px;
 }
 
 .welcome {
