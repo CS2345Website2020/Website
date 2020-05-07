@@ -77,21 +77,39 @@ function PHistory() {
                             style={{color: '#61b8ff'}}                                        
                         >
                             <h3>This Year's Progress</h3>
-                            <p>This semseter, similair to last year, our class was divided into smaller groups to
-                            work on different tasks. There was an additional team in charge of this website. 
-                            COVID-19 created lots of complications, forcing many of the teams to completely reevaluate 
+                            <p>This semester, similarly to last year, our class was divided into team groups to
+                            work on different tasks. There was an additional team in charge of building and maintaining this website. 
+                            With the introduction of remote learning, due to COVID-19 we all faced new challenges, forcing many of the teams to completely reevaluate 
                             their goals. The teams learned the importance of communication because each team required 
                             information and compatibility from the others. Remote teamwork involved weekly meetings for
-                            each team and a class wide meeting where each team would share the developments that they
-                            made over the week. Each team also had a Microsoft team where they could view one another’s
-                            completed, ongoing, and future tasks on scrum boards. Here is an example from our Tracking Team:
+                            each team and class "stand-up meetings" where each team would share the developments and demo any progess. Each team also had a Microsoft Team where they could view one another’s
+                            completed, ongoing, and future sprints on scrum boards. Here is an example from our Tracking Team:
                             <img src = {SCRUM} className = 'picture1' alt='Scrum from Tracking Team'></img>
                             </p>
 
                             <h4> Website Team </h4>
-                            <p>
+                            <ul>                     
+                            <li>Provided information and updates about project team members and their skills</li> 
+                            <li>Online gallery of art displayed from database</li>
+                            <li>Administrative access to database </li>
+                            </ul>
 
-                            </p>
+                            <h5> Mobile App Team </h5>
+                            <ul>                     
+                            <li>ADA compliance</li> 
+                            <li>Implemented audible aspects of app</li>
+                            <li>Created pages with leveled descriptions of art</li>
+                            </ul>
+                            <h5> UX/UI </h5>
+                            <ul>                     
+                            <li>Completed Coyote Verbal Description Training</li> 
+                            <li>Completed basic, spatial, and thematic painting descriptions for 5 paintings, which completed a corner of the gallery.</li>
+                            <li>Received feed back from blind/low vision participants about such descriptions via email and phone interviews. </li>
+                            <li>Entered all gallery data into the database via Swagger.</li>
+                            <li>Subjects for user testing of the database.</li>
+                            </ul>
+
+
                         </TimelineItem>
 
 
