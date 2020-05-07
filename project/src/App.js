@@ -2,6 +2,7 @@ import React from 'react';
 import { Route } from 'react-router-dom';
 import PrivateRoute from './components/PrivateRoute';
 import './App.css';
+import 'react-widgets/dist/css/react-widgets.css';
 
 // public components 
 import Home from './components/Home';

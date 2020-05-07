@@ -4,16 +4,53 @@
     flex-direction: row;
 }
 
-/* 
+#welcome-container {
+    /* border: 1px solid slateblue; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 60px;
+    background-color:#343a40;
+    color: aliceblue;
+}
+
 #welcome-admin {
-    border: 1px solid blue;
-} */
+    /* border: 1px solid blue; */
+    margin: auto 0px auto 10px;
+    align-self: start;
+}
+
+#date-and-time {
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-right: 15px;
+    text-align: right;
+}
+
+#date-today {
+    margin: 0px;
+}
+
+#time-today {
+    margin: 2px 0px 0px 0px;
+}
+
+#title-search {
+    /* border: 1px solid purple; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 5px;
+    margin-top: 10px;
+}
 
 #search-bar {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    margin-bottom: 10px;
+    margin: auto 0px;
 }
 
 #search-icon {
@@ -22,21 +59,20 @@
 }
 
 .search-input {
-    height: 30px;
-    width: 250px;
+    height: 25px;
+    width: 270px;
     padding: 5px;
     font-size: medium;
 }
 
 #dash-container {
     /* border: 1px solid purple; */
-    width: 170px; 
+    width: 200px; 
     text-align: left;
-    padding: 0 10px;
-}
-
-#dash-container .h4 {
-    font-size: larger;
+    color: white;
+    padding: 30px 10px 0 10px;
+    margin-right: 10px;
+    background-color: #212529;
 }
 
 #dash {
@@ -45,13 +81,13 @@
 
 #divider {
     width: 90%;
-    border-top: 1px solid black;
+    border-top: 1px solid black; 
+    margin-top: 30px;
 }
 
 #admin-list-container {
     /* border: 1px solid black; */
     width: 100%; 
-    /* background-color: rgb(207, 215, 233); */
     margin-bottom: 100px;
 }
 
@@ -59,19 +95,15 @@
     /* border: 1px solid black; */
     width: 100%; 
     min-height: 100vh;
-    /* background-color: rgb(207, 215, 233); */
-    margin-bottom: 50px;
-    margin-right: 15px;
+    margin: 0px 20px 50px 15px;
 }
 
 table, th, td {
     border-collapse: collapse;
-    /* table-layout: fixed; */
 }
 
 th, td {
     padding: 10px;
-    /* border-bottom: 2px solid whitesmoke; */
 }
 
 td {

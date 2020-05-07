@@ -6,11 +6,11 @@ import '../styles/about.css';
 import '../styles/HistoryStyles.css'
 
 //images
-import Blueprint from '../images/blueprint.png'
+// import Blueprint from '../images/blueprint.png'
 import GalleryPhoto from '../images/gallery.png'
 import TeamPhoto from '../images/DemoDay.png'
 import Database from '../images/Database.png'
-import Regensburg from '../images/city.jpg'
+// import Regensburg from '../images/city.jpg'
 import COSIT from '../images/cosit.png'
 import SCRUM from '../images/scrum.png'
 
@@ -33,7 +33,7 @@ function PHistory() {
                             database design, application development, computer tracking, and voice interface. The 
                             students were divided up into teams to work on each task. 
                             </p>
-                            <img src = {TeamPhoto} className = 'picture1' alt='photo of team'></img>
+                            <img src = {TeamPhoto} className = 'picture1' alt='Database team from 2019'></img>
                             
                             <p>
                             They accomplished a lot but ran into some problems on the way. One of these included 
@@ -41,11 +41,11 @@ function PHistory() {
                             all the teams. The course's core curriculum is focused on database design, and this 
                             project truly reinforces that. This is a visual diagram of their database.
                             </p>
-                            <img src = {Database} className = 'picture1' alt='photo of database'></img>
+                            <img src = {Database} className = 'picture1' alt='Database design plans'></img>
                             <p> 
                             This is the specific gallery that the project was implemented in:
                             </p>
-                            <img src = {GalleryPhoto} className = 'picture1' alt='photo of gallery'></img>
+                            <img src = {GalleryPhoto} className = 'picture1' alt='Bowdoin College art gallery'></img>
                         </TimelineItem>
 
                         <TimelineItem
@@ -88,9 +88,28 @@ function PHistory() {
                             </p>
 
                             <h4> Website Team </h4>
-                            <p>
+                            <ul>                     
+                            <li>Provided information and updates about project team members and their skills</li> 
+                            <li>Online gallery of art displayed from database</li>
+                            <li>Administrative access to database </li>
+                            </ul>
 
-                            </p>
+                            <h5> Mobile App Team </h5>
+                            <ul>                     
+                            <li>ADA compliance</li> 
+                            <li>Implemented audible aspects of app</li>
+                            <li>Created pages with leveled descriptions of art</li>
+                            </ul>
+                            <h5> UX/UI </h5>
+                            <ul>                     
+                            <li>Completed Coyote Verbal Description Training</li> 
+                            <li>Completed basic, spatial, and thematic painting descriptions for 5 paintings, which completed a corner of the gallery.</li>
+                            <li>Received feed back from blind/low vision participants about such descriptions via email and phone interviews. </li>
+                            <li>Entered all gallery data into the database via Swagger.</li>
+                            <li>Subjects for user testing of the database.</li>
+                            </ul>
+
+
                         </TimelineItem>
 
 
