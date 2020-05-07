@@ -16,7 +16,7 @@
 .flip-card {
   background-color: transparent;
   width: 350px;
-  height: 300px;
+  height: 320px;
   /* border: 1px solid #f1f1f1; */
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
   margin: 10px 0px;
@@ -61,32 +61,52 @@
 
 #flip-text {
   text-align: left;
-  margin: 5px 10px; 
+  margin: 0 15px; 
 }
-/* Display Art Styles */
 
+#flip-title {
+  margin: 10px 5px 5px 5px;
+
+}
+
+/* Display Art Styles */
 #display-container {
   /* border: 1px solid red; */
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  /* background-color: rgb(255, 252, 244); */
   margin-bottom: 50px;
   display: flex;
   flex-direction: row;
-  width: 90%; 
+  width: 98%; 
   margin: 0 auto; 
+  background-image: url('../images/artwork/1813.13.jpg');
+  color: white;
+  /* font-size: larger; */
 }
 
 #display-image {
-  width: 450px;
+  width: 400px;
   height: auto;
   object-fit: cover;
 }
 
 #display-info {
-  margin-top: 40px;
+  /* margin-top: 10px;
+  margin-right: 25px; */
+  margin: 40px;
   text-align: left;
 }
 
+#display-artist {
+  margin: 0; 
+}
+
+#display-title{
+  margin-bottom: 0; 
+}
+
 .data-section-titles {
-  text-align: left;
-  margin-left: 80px;
+  /* text-align: left; */
+  margin: 50px auto 20px auto;
+  /* margin-left: 50px; */
 }
