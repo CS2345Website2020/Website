@@ -26,7 +26,7 @@ import TashaChrist from '../images/meet-the-team/tasha-christ.jpeg'
 import AdelaideEvans from '../images/meet-the-team/adelaide-evans.jpeg'
 import BradIngersoll from '../images/meet-the-team/brad-ingersoll.jpeg'
 import IsaacKabuika from '../images/meet-the-team/isaac-kabuika.jpeg'
-import ThaisCarillo from '../images/meet-the-team/thais-carillo.jpeg'
+import ThaisCarillo from '../images/meet-the-team/Thais-Carillo.jpeg'
 import MatthewDonnelly from '../images/meet-the-team/matthew-donnelly.jpeg'
 import CobraCurtis from '../images/meet-the-team/cobra-curtis.jpeg'
 
