@@ -10,6 +10,7 @@ import '../styles/HistoryStyles.css'
 import GalleryPhoto from '../images/gallery.png'
 import TeamPhoto from '../images/DemoDay.png'
 import Database from '../images/Database.png'
+import Database1 from '../images/TeamPhotos/inclasssketch.jpg'
 // import Regensburg from '../images/city.jpg'
 import COSIT from '../images/cosit.png'
 import SCRUM from '../images/scrum.png'
@@ -109,6 +110,7 @@ function PHistory() {
                             <li>Entered all gallery data into the database via Swagger.</li>
                             <li>Subjects for user testing of the database.</li>
                             </ul>
+                            
 
                             <h6>Alexa Team</h6>
                             <ul>
@@ -125,9 +127,20 @@ function PHistory() {
                             <li>Map model using artwork adjacency and zoning. The map is modeled as a graph, where nodes are artworks.</li>
                             <li>Json Web Token authentication (paired with admin level accounts) allows for art museum managers to administer the database – via the portal built by the Website Team.</li>
                             </ul>
+                            <p>Here is the development of the Database: </p>
+                            <img src = {Database1} className = 'picture1' alt='Database Concept Sketch'></img>
+                            
+
+                            <h8>Data Collection</h8>
+                            <ul>
+                            <li>Served as a liaison between other groups and the museum by responding to specific teams needs and data requests.</li>
+                            <li>Began the development of a virtual tour using the Google Virtual Your creator.</li>
+                            <li>Incorporated accessibility features into the google tour such as audio descriptions and picture enlargement. </li>
+                            </ul>
 
 
                         </TimelineItem>
+
 
 
                     </Timeline> 
