@@ -101,13 +101,30 @@ function PHistory() {
                             <li>Implemented audible aspects of app</li>
                             <li>Created pages with leveled descriptions of art</li>
                             </ul>
-                            <h5> UX/UI </h5>
+
+                            <h5> UX/UI Team</h5>
                             <ul>                     
                             <li>Completed Coyote Verbal Description Training</li> 
                             <li>Completed basic, spatial, and thematic painting descriptions for 5 paintings, which completed a corner of the gallery.</li>
                             <li>Received feed back from blind/low vision participants about such descriptions via email and phone interviews. </li>
                             <li>Entered all gallery data into the database via Swagger.</li>
                             <li>Subjects for user testing of the database.</li>
+                            </ul>
+
+                            <h6>Alexa Team</h6>
+                            <ul>
+                            <li>Created team server</li>
+                            <li>Connected to the database using https requests through server</li>
+                            <li>Updated past model with new descriptions and information</li>
+                            </ul>
+
+                            <h7>Database Team</h7>
+                            <ul>
+                            <li>Fully functioning relational SQL database used to represent the Bowdoin Art Gallery hosted at ClearDB</li>
+                            <li>Node.js API Server, hosted at Heroku. API endpoints are documented using Swagger</li>
+                            <li>API Server developed using a special npm package, “nodespull,” built by our very own, Isaac Kabuika</li>
+                            <li>Map model using artwork adjacency and zoning. The map is modeled as a graph, where nodes are artworks.</li>
+                            <li>Json Web Token authentication (paired with admin level accounts) allows for art museum managers to administer the database – via the portal built by the Website Team.</li>
                             </ul>
 
 
