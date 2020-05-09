@@ -26,7 +26,9 @@ import TashaChrist from '../images/meet-the-team/tasha-christ.jpeg'
 import AdelaideEvans from '../images/meet-the-team/adelaide-evans.jpeg'
 import BradIngersoll from '../images/meet-the-team/brad-ingersoll.jpeg'
 import IsaacKabuika from '../images/meet-the-team/isaac-kabuika.jpeg'
-
+import ThaisCarillo from '../images/meet-the-team/Thais-Carillo.jpeg'
+import MatthewDonnelly from '../images/meet-the-team/matthew-donnelly.jpeg'
+import CobraCurtis from '../images/meet-the-team/cobra-curtis.jpeg'
 
 //git images
 //import git2 from '../images/meet-the-team/36675751.png'
@@ -199,6 +201,27 @@ function About() {
                 <p> CS and Government major and Duolingo addict. </p>
         </div>
         </div>
+
+        <h2 class="team-title"> Virtual Reality Lab Student Volunteers </h2>
+        <div class="flex-container">
+        <div class="column">
+                <img className="avatar" src={CobraCurtis} alt="Student Cobra Curtis"/>
+                <h2><a href="https://www.linkedin.com/in/cobra-curtis-57106919b/" className="link">Cobra Zen Curtis '23</a></h2>
+                <p> Prospective Major: Computer Science, Minor: Environmental Studies - Bowdoin VR Lab Modeler and Gibbons Summer Research Fellow '20 </p>
+        </div>
+        <div class="column">
+                <img className="avatar" src={ThaisCarillo} alt="Student Thais Carillo"/>
+                <h2><a href="https://www.linkedin.com/in/thais-carrillo-4785b21a6/" className="link">Thais Carillo '23</a></h2>
+                <p> CProspective Majors: Education and Psychology Major, Minor: Computer Science -        Bowdoin VR Lab Modeler and Gibbons Summer Research Fellow '20 </p>
+        </div> 
+        <div class="column">
+                <img className="avatar" src={MatthewDonnelly} alt="Student Matthew Donnelly"/>
+                <h2><a href="https://www.linkedin.com/in/matthew-donnelly-46786b16a/" className="link">Matthew Donnelly '22</a></h2>
+                <p> Neuroscience Minor: Computer Science - Bowdoin VR Lab Lab Manager and Gibbons Summer Research Fellow '19  </p>
+        </div>
+        </div>
+
+
         </div>
     
     );

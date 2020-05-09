@@ -12,31 +12,17 @@ function ArtCard({ art, photo }) {
                     <img src={photo} alt={`${art.title} by ${art.artist}`} className="flip-image"/>
                 </div>
                 <div className="flip-card-back">
-                    <h1>{art.title}</h1>
+                    <h2 id="flip-title">{art.title}</h2>
                     <div id="flip-text">
                         <p><strong>Artist</strong> - {art.artist}</p>
-                        <p><strong>Creation Date</strong> - {art.creation_date}</p>
-                        <p><strong>Medium and Support</strong> - {art.medium_support}</p>
-                        <p><strong>Credit Line</strong>- {art.credit_line}</p>
+                        {/* <p><strong>Medium and Support</strong> - {art.medium_support}</p>
+                        <p><strong>Type</strong> - {art.type}</p> */}
+                        <p><strong>Basic Description</strong> - {art.description_basic}</p>
                     </div>
                 </div>
             </div>
         </div>
     );
 }
-
-// <div className="art-card">
-//             <img src={photo} alt={`${art.title} by ${art.artist}`} className="photo"/>
-//             <div className="art-text-container">
-//                 <h2>{art.title}</h2>
-//                 <h3>{art.artist}</h3>
-//                 <p>{art.creation_date}</p>
-//                 <p>{art.type}; {art.medium_support}</p>
-//                 <p>{art.credit_line}</p>
-//                 <p>{art.description}</p>
-//                 <p>{art.accession_number}</p>
-//             </div>
-//         </div>
-//         </> 
 
 export default ArtCard;

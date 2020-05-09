@@ -20,20 +20,21 @@ const EditArtForm = ({ artId, closeModal }) => {
 			.then(response => {setArt(response.data.art_object)})
 			.catch(error => console.log(error.response));
 		
-	}, [artId, art])
+	}, [artId])
 
 	// update hook info 
 	const handleChange = event => setArt({...art, [event.target.name]: event.target.value})
 
 	const handleSubmit = event => {
 		event.preventDefault(); 
+		console.log(art)
 		axios
-			.put(`https://cs2345-db-api.herokuapp.com/art_object${art.id}`, art)
+			.put(`https://cs2345-db-api.herokuapp.com/art_object/${art.id}`, art)
 			.then(response => {
 				console.log("edit art form response data", response);
 			})
 			.catch(error => {
-				console.log(error.response)
+				console.log(error)
 			})
 		
 		// wait for a second before closing the modal 
@@ -73,19 +74,19 @@ const EditArtForm = ({ artId, closeModal }) => {
 				
 				{/* basic description */}
  				<h3 className="edit-placeholder">Basic Description</h3>
- 				<input
+ 				<textarea
 					type="text"
 					component="textarea"
 					name="description_basic"
 					placeholder="Enter Basic Description"
 					value={art.description_basic}
-					className="edit-input"
+					className="description-input"
 					onChange={handleChange} 
 				/>
 
 				{/* spatial description */}
  				<h3 className="edit-placeholder">Spatial Description</h3>
-				<input 
+				<textarea 
 					type="text"
 					component="textarea"
 					name="description_spatial"
@@ -97,7 +98,7 @@ const EditArtForm = ({ artId, closeModal }) => {
 				
 				{/* thematic description */}
  				<h3 className="edit-placeholder">Thematic Description</h3>
-				<input 
+				<textarea 
 					type="text"
 					component="textarea"
  					name="description_thematic"
@@ -171,6 +172,8 @@ const EditArtForm = ({ artId, closeModal }) => {
 					className="edit-input"
 					onChange={handleChange}		 
 				/>
+
+				<button type="submit" className="sl-button">Submit</button>
 			</form>
 		</div>
 	);
