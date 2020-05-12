@@ -10,14 +10,14 @@ import Logo from '../images/bowdoin-logo.png'
 function Navigation() {
 
     // hook keeps track of token status (if token exists)
-    const [isloggedIn, setLogin] = useState(false);
+    const [isloggedIn, setLogin] = useState(localStorage.getItem('token'));
 
     // check for token  
     useEffect(() => {
-        if (localStorage.getItem('token')) {
+        if (isloggedIn) {
             setLogin(true)
         }
-    }, []); 
+    }, [isloggedIn]); 
 
     return (
         <div id="nav-container">

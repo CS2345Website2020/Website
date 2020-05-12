@@ -102,10 +102,10 @@ const Login = withFormik({
             .post('https://cs2345-db-api.herokuapp.com/admin/login', values)
             .then(response => {
                 // successful 
-                console.log("post login api response object", response.data);
+                // console.log("post login api response object", response.data);
                 
                 localStorage.setItem('token', response.data.jwt);
-
+            
                 props.history.push('/Admin')
             }) 
     

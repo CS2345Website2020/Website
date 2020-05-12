@@ -22,13 +22,15 @@ import ArtistForm from './components/admin/ArtistForm';
 import CategoryForm from './components/admin/CategoryForm';
 import GeometryForm from './components/admin/GeometryForm';
 import OwnerForm from './components/admin/OwnerForm';
+import Zones from './components/admin/Zones';
 
 
 function App() {
+
   return (
     <div className="App">
       <div className="page-content">
-        <Navigation/>
+        <Route exact path={["/Database", "/", "/Project-History", "/About", "/Art-Collection", "/Admin/Login", "/Admin/Register"]} component={Navigation}></Route> 
         <Route path="/" exact component={Home}></Route>
         <Route path="/Database" component={Database}></Route>
         <Route path="/Project-History" component={PHistory}></Route>
@@ -36,12 +38,14 @@ function App() {
         <Route path="/Art-Collection" component={ArtList}></Route>
         <Route path="/Admin/Login" component={Login}></Route>
         <Route path="/Admin/Register" component={SignUp}></Route>
+        <PrivateRoute path="/Admin" component={Navigation}></PrivateRoute>
         <PrivateRoute path="/Admin" exact component={AdminHome} />
         <PrivateRoute path="/Admin/Add-Art" component={AddArtForm} />
         <PrivateRoute path="/Admin/Add-Artist" component={ArtistForm} />
         <PrivateRoute path="/Admin/Add-Category" component={CategoryForm} />
         <PrivateRoute path="/Admin/Add-Owner" component={OwnerForm} />
         <PrivateRoute path="/Admin/Add-Geometry" component={GeometryForm} />
+        <PrivateRoute path="/Admin/Zones" component={Zones} />
       </div>
       <Footer/>
     </div>

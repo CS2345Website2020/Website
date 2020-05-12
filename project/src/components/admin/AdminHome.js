@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import '../../styles/AdminHome.css'
+import { Link } from 'react-router-dom'; 
+import '../../styles/AdminHome.css';
 import AdminArtList from './AdminArtList';
 import DropDownList from 'react-widgets/lib/DropdownList';
-import { FaCog, FaWrench, FaRegQuestionCircle } from 'react-icons/fa'
+import { FaCog, FaWrench, FaRegQuestionCircle, FaRegMap } from 'react-icons/fa'
+
 
 function AdminHome(props) {
 
@@ -21,6 +23,7 @@ function AdminHome(props) {
         return () => clearInterval(secTimer);
     }, []);
 
+ 
     return (
         <div>
             <div id="welcome-container">
@@ -40,21 +43,8 @@ function AdminHome(props) {
                         defaultValue={"Forms"}
                         onChange={event => {props.history.push(`/Admin/${event.split(' ').join('-')}`)}}
                     />
-                    {/* <Link to='/Admin/Add-Artist'>
-                            <h4>Add Artist</h4>
-                    </Link>
-                    <Link to='/Admin/Add-Category'>
-                            <h4>Add Category</h4>
-                    </Link>
-                    <Link to='/Admin/Add-Owner'>
-                            <h4>Add Owner</h4>
-                    </Link>
-                    <Link to='/Admin/Add-Geometry'>
-                            <h4>Add Geometry</h4>
-                    </Link>
-                    <Link to='/Admin/Add-Art'>
-                            <h4>Add Artwork</h4>
-                    </Link> */}
+                    <Link to='/Admin/Zones' style={{textDecoration: 'none', color: 'white'}}><p><FaRegMap size={15} style={{marginRight: '4px', marginTop: '5px', paddingRight: '4px'}}/>Zones</p></Link>
+                    
 
                     <div id="divider"></div>
                     <div id="zone-bottom">

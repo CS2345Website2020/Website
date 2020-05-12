@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import {axiosWithAuth} from './axiosWithAuth.js'
 
 // styles 
 import '../../styles/AdminForms.css'
@@ -27,8 +28,8 @@ const EditArtForm = ({ artId, closeModal }) => {
 
 	const handleSubmit = event => {
 		event.preventDefault(); 
-		console.log(art)
-		axios
+		// console.log(art)
+		axiosWithAuth()
 			.put(`https://cs2345-db-api.herokuapp.com/art_object/${art.id}`, art)
 			.then(response => {
 				console.log("edit art form response data", response);
