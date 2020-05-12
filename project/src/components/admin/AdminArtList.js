@@ -22,7 +22,7 @@ function AdminArtList() {
                 .get('https://cs2345-db-api.herokuapp.com/art_object/all')
                 .then(response => {
                     // // successful 
-                    // console.log("Art data response", response.data)
+                    console.log("Art data response", response.data)
 
                     // save art data to state 
                     setArt(response.data.art_objects)

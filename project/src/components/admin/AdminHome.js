@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom'; 
-import '../../styles/AdminHome.css'
+import '../../styles/AdminHome.css';
 import AdminArtList from './AdminArtList';
 import DropDownList from 'react-widgets/lib/DropdownList';
 import { FaCog, FaWrench, FaRegQuestionCircle, FaRegMap } from 'react-icons/fa'

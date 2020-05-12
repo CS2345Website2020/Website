@@ -144,7 +144,66 @@ tbody {
     /* border: 1px solid aqua; */
     width: 5%;
 }
+
 .row-Delete {
     /* border: 1px solid saddlebrown; */
     width: 5%;
 }
+
+/* zones */
+#zones-container {
+    /* border: 1px solid red; */
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 90%; 
+    margin: 0 auto;
+    padding-bottom: 80px;
+}
+
+.zone-card {
+    /* border: 1px solid blue; */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.459);
+    width: 345px;
+    height: 300px;
+    margin: 40px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 18px;
+}
+
+#zone-edit-trash {
+    /* border: 1px solid blue; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 30%;
+    margin: 0 auto;
+    font-size: 25px;
+}
+  
+#zones-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    max-width: 700px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.zone-buttons {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #28b960;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+    width: 125px;
+    /* transition: all 0.5s; */
+    cursor: pointer;
+    margin: 20px auto;
+}
+
