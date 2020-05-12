@@ -1,11 +1,11 @@
 import React from 'react';
 
-function LocationForm(props) {
+function Zones(props) {
     return (
-        <div>
+        <div id="zones">
             
         </div>
     );
 }
 
-export default LocationForm;
+export default Zones;

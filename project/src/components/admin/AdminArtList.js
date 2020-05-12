@@ -5,23 +5,16 @@ import AdminArtCard from './AdminArtCard';
 // search bar icon 
 import { FaSearch } from 'react-icons/fa';
 
+// loading icon 
+import { StageSpinner } from 'react-spinners-kit';
+
 
 function AdminArtList() {
     // initial state of art data 
-    const [art, setArt] = useState([])
+    const [art, setArt] = useState()
 
     // search bar state 
     const [search, setSearch] = useState("")
-
-    // loop through art object 
-    // const loopObj = (artObj) => {
-    //     for (let [key, value] of Object.entries(artObj)) {
-    //         if (typeof value === "string" && value.toLowerCase().match(search)) {
-    //             console.log(`key ${key}, value ${value}, typeof value ${typeof value}`);
-    //             return <AdminArtCard art={artObj} key={artObj.accession_number}/>
-    //         }
-    //     }
-    // }
     
     useEffect(() => {
         const getArtData = () => {
@@ -49,7 +42,9 @@ function AdminArtList() {
     }
 
     if (!art) {
-        return (<h1>Loading...</h1>)
+        return (<div style={{margin: 'auto', width: '40px', paddingTop: '90px'}}>
+        <StageSpinner color="black"/>
+    </div> )
     }
 
     return (

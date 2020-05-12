@@ -15,7 +15,7 @@ function Home() {
         </h2>
         </div>
         </div>
-        <iframe width="100%" height="880px" src="https://poly.google.com/view/6FGorlIYknW/embed?chrome=min" frameborder="0" allowvr="yes" allow="vr; xr; accelerometer; magnetometer; gyroscope; autoplay;" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel="" ></iframe>
+        <iframe width="100%" height="880px" title="Gallery Display" src="https://poly.google.com/view/6FGorlIYknW/embed?chrome=min" frameborder="0" allowvr="yes" allow="vr; xr; accelerometer; magnetometer; gyroscope; autoplay;" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel="" ></iframe>
         </div>
     );
 }
