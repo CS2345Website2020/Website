@@ -33,13 +33,16 @@ function Database() {
         <>
             { art ? <div className="bottom-padding">
                 <h1>Database</h1>
-                <p>All artwork and information displayed on this page is being pulled from the database created by the database team.</p>
-                <p>To learn more about the creators of the back-end, check out the about section of our website.</p>
+                <div id="web-header">
+                    <p className="instructions">All artwork and information displayed on this page is being pulled from the database created by the database team.</p>
+                    <p className="instructions">To learn more about the creators of the back-end, check out the about section of our website.</p>
+                </div>
                 <div>
                     <DisplayArt art={art}/>
                 </div>
                 <div>
-                    <h3 className="data-section-titles">Art on Display</h3>
+                    <h2 className="data-section-titles">Art on Display</h2>
+                    <p className="instructions">Drag your mouse over any artwork to read its basic description.</p>
                     <ArtList />
                 </div>
             </div> : <div style={{margin: 'auto', width: '40px', paddingTop: '90px'}}>
